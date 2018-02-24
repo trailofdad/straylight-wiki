@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Straylight Wiki',
+    title: 'Straylight Systems',
     description: 'A wiki for Straylight Systems',
     siteUrl: '',
     author: 'trailofdad',

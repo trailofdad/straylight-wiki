@@ -14,11 +14,13 @@ class SiteNavi extends React.Component {
             <ul className="navbar-nav bd-navbar-nav flex-row">
               <li
                 className={
-                  location.pathname === '/' ? 'nav-item active' : 'nav-item'
+                  location.pathname === '/blog/'
+                    ? 'nav-item active'
+                    : 'nav-item'
                 }
               >
-                <Link to="/" className="nav-link">
-                  Home
+                <Link to="/blog/" className="nav-link">
+                  Blog
                 </Link>
               </li>
               <li
@@ -30,6 +32,17 @@ class SiteNavi extends React.Component {
               >
                 <Link to="/about/" className="nav-link">
                   About
+                </Link>
+              </li>
+              <li
+                className={
+                  location.pathname === '/apply/'
+                    ? 'nav-item active'
+                    : 'nav-item'
+                }
+              >
+                <Link to="/apply/" className="nav-link">
+                  Apply
                 </Link>
               </li>
             </ul>

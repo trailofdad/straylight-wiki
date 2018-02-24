@@ -5,9 +5,9 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-import SitePost from '../components/SitePost'
+import SitePost from '../../components/SitePost'
 
-class BlogIndex extends React.Component {
+class Blog extends React.Component {
   render() {
     const pageLinks = []
     const site = get(this, 'props.data.site.siteMetadata')
@@ -46,16 +46,16 @@ class BlogIndex extends React.Component {
             },
           ]}
         />
-        <h1>This is the new index page</h1>
+        {pageLinks}
       </div>
     )
   }
 }
 
-export default BlogIndex
+export default Blog
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     site {
       siteMetadata {
         title
