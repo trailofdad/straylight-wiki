@@ -25,13 +25,13 @@ class SiteNavi extends React.Component {
               </li>
               <li
                 className={
-                  location.pathname === '/about/'
+                  location.pathname === '/origin/'
                     ? 'nav-item active'
                     : 'nav-item'
                 }
               >
-                <Link to="/about/" className="nav-link">
-                  About
+                <Link to="/origin/" className="nav-link">
+                  Origin
                 </Link>
               </li>
               <li

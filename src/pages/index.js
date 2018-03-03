@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import Index from '../components/Index/index'
 
 class SiteIndex extends React.Component {
   render() {
@@ -26,7 +27,7 @@ class SiteIndex extends React.Component {
             },
           ]}
         />
-        <h1>This is the new index page</h1>
+        <Index />
       </div>
     )
   }
@@ -34,7 +35,7 @@ class SiteIndex extends React.Component {
 
 export default SiteIndex
 
-// TODO: Add index content to site metadata, update query
+// TODO: Add index content to site metadata, update query - pass to component as props
 export const pageQuery = graphql`
   query IndexQuery {
     site {

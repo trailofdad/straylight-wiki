@@ -34,12 +34,22 @@ class Apply extends React.Component {
             },
           ]}
         />
-        <section className="text-center">
+        <section>
           <div className="container">
             <h1>Apply</h1>
-            <p className="lead text-muted">lead</p>
+            <p className="lead text-muted">Applying to Straylight Systems</p>
             <div>
-              <p>Hey this is some application stuff.</p>
+              <p>
+                If you are not currently in contact with a recruiter, please
+                join the channel “Straylight Systems Public” in game to get an
+                interview (quick chat). Until you have been notified otherwise
+                please stay in the public channel.
+              </p>
+              <p>
+                Since you’re reading this outside the realm of New Eden, you can
+                also get in touch with us on Slack. You can obtain an invite
+                here: http://slack.straylight.systems.
+              </p>
             </div>
           </div>
         </section>

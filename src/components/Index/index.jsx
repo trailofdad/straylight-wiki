@@ -3,11 +3,11 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { siteMetadata } from '../../../gatsby-config'
 
-class About extends React.Component {
+class Index extends React.Component {
   render() {
     const pathPrefix =
       process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-    const title = 'About'
+    const title = 'Straylight Systems'
     return (
       <div>
         <Helmet
@@ -34,12 +34,12 @@ class About extends React.Component {
             },
           ]}
         />
-        <section className="text-center">
+        <section>
           <div className="container">
-            <h1>About</h1>
-            <p className="lead text-muted">lead</p>
+            <h1>Straylight Systems</h1>
+            <p className="lead text-muted">Outmanned, but never outgunned</p>
             <div>
-              <p>Hey this is some stuff about some stuff.</p>
+              <p>Welcome to the Straylight, pilot.</p>
             </div>
           </div>
         </section>
@@ -48,4 +48,4 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default Index
