@@ -20,17 +20,16 @@ $theme-colors: (
   dark: $gray-900
 ) !default;
 // Options
-
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-rounded: true !default;
 $enable-shadows: true !default;
 $enable-gradients: true !default;
 $enable-transitions: true !default;
 $enable-hover-media-query: false !default;
+
 $enable-grid-classes: true !default;
 $enable-print-styles: true !default;
 // Grid containers
-$e
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
   sm: 540px,
@@ -39,19 +38,17 @@ $container-max-widths: (
   xl: 840px
 ) !default;
 // Body
-$e
 // Settings for the `<body>` element.
 $body-bg: $gray-900 !default;
 $body-color: $gray-200 !default;
 $inverse-bg: $gray-200 !default;
 $inverse-color: $gray-900 !default;
 // Links
-//
 // Style anchor elements.
 $link-decoration: none !default;
 $link-hover-decoration: none !default;
+
 // Fonts
-$i
 @import './fonts.scss';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 html,
