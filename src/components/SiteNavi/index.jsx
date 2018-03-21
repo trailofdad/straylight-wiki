@@ -1,26 +1,27 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './style.scss'
 
 class SiteNavi extends React.Component {
   render() {
     const { location, title } = this.props
     return (
-      <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
+      <nav className="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bg-primary">
         <div className="container">
           <Link className="text-center" to="/">
-            <h1 className="navbar-brand mb-0">{title}</h1>
+            <h1 className="navbar-brand text-primary mb-0">{title}</h1>
           </Link>
           <div className="navbar-nav-scroll">
             <ul className="navbar-nav bd-navbar-nav flex-row">
               <li
                 className={
-                  location.pathname === '/blog/'
+                  location.pathname === '/journal/'
                     ? 'nav-item active'
                     : 'nav-item'
                 }
               >
-                <Link to="/blog/" className="nav-link">
-                  Blog
+                <Link to="/journal/" className="nav-link">
+                  Journal
                 </Link>
               </li>
               <li
@@ -33,6 +34,15 @@ class SiteNavi extends React.Component {
                 <Link to="/origin/" className="nav-link">
                   Origin
                 </Link>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="https://zkillboard.com/corporation/98498664/"
+                  className="nav-link"
+                  target="_blank"
+                >
+                  Kills
+                </a>
               </li>
               <li
                 className={

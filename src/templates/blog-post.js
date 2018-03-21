@@ -40,7 +40,7 @@ class BlogPostTemplate extends React.Component {
             },
           ]}
         />
-        {template}
+        <section>{template}</section>
       </div>
     )
   }

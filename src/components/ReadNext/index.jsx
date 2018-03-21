@@ -16,7 +16,7 @@ class ReadNext extends React.Component {
           {title}
           <Link to="/profile/">
             <br />
-            <strong>{author}</strong> on Profile
+            As reported by <strong>{author}</strong>
           </Link>
         </p>
       </div>

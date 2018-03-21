@@ -35,9 +35,9 @@ class SitePost extends React.Component {
     const categories = []
     forEach(data, (item, i) => {
       categories.push(
-        <span className="badge badge-primary text-white" key={i}>
+        <small className="text-primary text-uppercase px-1" key={i}>
           {item}
-        </span>
+        </small>
       )
     })
     return categories
@@ -61,8 +61,8 @@ class SitePost extends React.Component {
     )
 
     return (
-      <div className="container">
-        <div className="articles col-md-12">
+      <div className="container p-0">
+        <div className="articles">
           <div className="article-wrap" key={path}>
             <div className="page-header">
               <Link style={{ boxShadow: 'none' }} to={path}>
