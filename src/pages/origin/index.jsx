@@ -78,7 +78,11 @@ class Origin extends React.Component {
                   target="_blank"
                 >
                   Thaddeus Drake
-                </a>, in all of his glory.
+                </a>, in all of his glory, invited to join&nbsp;
+                <a href="https://zkillboard.com/alliance/99006020/">
+                  Who Dares Wins
+                </a>{' '}
+                on a quest for dank frags.
               </p>
               <p>
                 Empowered by their newfound devotion, they venture onward, on a
