@@ -78,8 +78,12 @@ class Origin extends React.Component {
                   target="_blank"
                 >
                   Thaddeus Drake
-                </a>, in all of his glory, invited to join&nbsp;
-                <a href="https://zkillboard.com/alliance/99006020/">
+                </a>{' '}
+                who, in all of his glory, invited them to join forces with&nbsp;
+                <a
+                  href="https://zkillboard.com/alliance/99006020/"
+                  target="_blank"
+                >
                   Who Dares Wins
                 </a>{' '}
                 on a quest for dank frags.
