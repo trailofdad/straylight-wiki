@@ -22,7 +22,7 @@ class Template extends React.Component {
   render() {
     const { location, children } = this.props
     return (
-      <div>
+      <div className={location.pathname === '/' ? 'with-background' : ''}>
         <SiteNavi title={siteMetadata.title} {...this.props} />
         {children()}
       </div>

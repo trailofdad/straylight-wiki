@@ -35,12 +35,9 @@ class Index extends React.Component {
           ]}
         />
         <section>
-          <div className="container">
-            <h1>Straylight Systems</h1>
-            <p className="lead text-muted">Outmanned, but never outgunned</p>
-            <div>
-              <p>Welcome to the Straylight, pilot.</p>
-            </div>
+          <div className="container p-0">
+            <h1>A squadron worth fighting for</h1>
+            <p className="lead text-muted">Often outmanned, never outgunned.</p>
           </div>
         </section>
       </div>

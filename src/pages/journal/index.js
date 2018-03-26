@@ -46,7 +46,9 @@ class Blog extends React.Component {
             },
           ]}
         />
-        {pageLinks}
+        <section>
+          {pageLinks}
+        </section>
       </div>
     )
   }

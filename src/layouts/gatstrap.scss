@@ -10,75 +10,112 @@
 
 // Reassign color vars to semantic color scheme
 $theme-colors: (
-    primary: $purple,
-    secondary: $gray-600,
-    success: $green,
-    info: $cyan,
-    warning: $yellow,
-    danger: $red,
-    light: $gray-100,
-    dark: $gray-800
-  )
-  !default;
-
+  primary: $champagne,
+  secondary: $black,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-200,
+  dark: $gray-900
+) !default;
 // Options
-//
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-rounded: true !default;
 $enable-shadows: true !default;
-$enable-gradients: false !default;
-$enable-transitions: false !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
 $enable-hover-media-query: false !default;
+
 $enable-grid-classes: true !default;
 $enable-print-styles: true !default;
-
 // Grid containers
-//
 // Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (sm: 540px, md: 640px, lg: 740px, xl: 840px) !default;
-
+$container-max-widths: (
+  sm: 540px,
+  md: 640px,
+  lg: 740px,
+  xl: 840px
+) !default;
 // Body
-//
 // Settings for the `<body>` element.
-
-$body-bg: $white !default;
-$body-color: $gray-700 !default;
-$inverse-bg: $gray-900 !default;
-$inverse-color: $gray-600 !default;
-
+$body-bg: $gray-900 !default;
+$body-color: $gray-200 !default;
+$inverse-bg: $gray-200 !default;
+$inverse-color: $gray-900 !default;
 // Links
-//
 // Style anchor elements.
 $link-decoration: none !default;
 $link-hover-decoration: none !default;
 
 // Fonts
-//
 @import './fonts.scss';
-
-
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
-
 html,
 body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $white !important;
+    font-weight: 400;
+  }
+  p,
+  small {
+    letter-spacing: 1px;
+    text-shadow: 0 0 0;
+  }
+  > div {
+    height: 100%;
+  }
 }
-
 p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  font-weight: 200;
+  img:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  a {
+    font-weight: 300;
+  }
 }
-
 img {
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   max-width: 100%;
+  filter: sepia(100%);
+  transition: filter 375ms linear, transform 175ms linear;
+  &:hover {
+    filter: sepia(
+      0%
+    ); /* TODO: On click via class, less obnoxious
+    transform: scale3d(1.1, 1.1, 1.1); */
+  }
 }
-
-img:hover {
-  animation: pulse 0.5s;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+  li {
+    em {
+      font-size: 0.9rem;
+      color: $gray-600;
+    }
+  }
+}
+.with-background {
+  background: $gray-900 url(/img/cover.png) center center/cover no-repeat fixed;
+  height: 100%;
+}
+.text-muted {
+  color: $champagne-muted !important;
 }

@@ -3,8 +3,8 @@ module.exports = {
     title: 'Straylight Systems',
     description: 'A wiki for Straylight Systems',
     siteUrl: '',
-    author: 'trailofdad',
-    twitter: 'trailofdad',
+    author: 'Straylight Command',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -51,13 +51,8 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
+            src: '/img/android-chrome-256x256.png',
+            sizes: '256x256',
             type: 'image/png',
           },
         ],
