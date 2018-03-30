@@ -79,21 +79,6 @@ class SiteNavi extends React.Component {
                   </a>
                 </div>
               </li> */}
-              <li
-                className={
-                  location.pathname === '/killboard/'
-                    ? 'nav-item active'
-                    : 'nav-item'
-                }
-              >
-                <a
-                  className="nav-link"
-                  target="_blank"
-                  href="https://zkillboard.com/corporation/98498664/"
-                >
-                  Killboard
-                </a>
-              </li>
             </ul>
           </div>
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
