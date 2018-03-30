@@ -48,7 +48,7 @@ module.exports = {
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
-        display: 'minimal-ui',
+        display: 'standalone',
         icons: [
           {
             src: '/img/android-chrome-192x192.png',
@@ -70,7 +70,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',

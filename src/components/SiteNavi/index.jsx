@@ -45,6 +45,44 @@ class SiteNavi extends React.Component {
                   Apply
                 </Link>
               </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="http://example.com"
+                  id="dropdown01"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Wiki
+                </a>
+                <div className="dropdown-menu" aria-labelledby="dropdown01">
+                  <a className="dropdown-item" href="#">
+                    Doctrines
+                  </a>
+                  <a className="dropdown-item" href="#">
+                    Making ISK
+                  </a>
+                  <a className="dropdown-item" href="#">
+                    Communications
+                  </a>
+                </div>
+              </li>
+              <li
+                className={
+                  location.pathname === '/killboard/'
+                    ? 'nav-item active'
+                    : 'nav-item'
+                }
+              >
+                <a
+                  className="nav-link"
+                  target="_blank"
+                  href="https://zkillboard.com/corporation/98498664/"
+                >
+                  Killboard
+                </a>
+              </li>
             </ul>
           </div>
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
