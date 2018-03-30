@@ -55,6 +55,7 @@ class SiteNavi extends React.Component {
                   Apply
                 </Link>
               </li>
+              {/* WIP - conditionally display wiki
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -77,7 +78,7 @@ class SiteNavi extends React.Component {
                     Communications
                   </a>
                 </div>
-              </li>
+              </li> */}
               <li
                 className={
                   location.pathname === '/killboard/'
