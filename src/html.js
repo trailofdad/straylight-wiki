@@ -13,7 +13,9 @@ if (process.env.NODE_ENV === 'production') {
 export default class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
+
     let css
+
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
@@ -37,9 +39,9 @@ export default class HTML extends React.Component {
           <link
             href="/img/apple-touch-icon.png"
             rel="apple-touch-icon"
-            sizes="180x180"
+            sizes="256x256"
           />
-          <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+          <link href="/img/favicon.png" rel="icon" type="image/png" />
         </head>
         <body>
           <div

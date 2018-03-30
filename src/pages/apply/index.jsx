@@ -35,20 +35,28 @@ class Apply extends React.Component {
           ]}
         />
         <section>
-          <div className="container">
+          <div className="container p-0">
             <h1>Apply</h1>
-            <p className="lead text-muted">Applying to Straylight Systems</p>
+            <p className="lead text-muted">Your home among the stars awaits.</p>
             <div>
               <p>
+                If you're a positive individual seeking something more rewarding
+                than the typical corporate experience in EVE, you might just be
+                a fit for Straylight. We're currently enlisting active combat
+                enthusiasts for mercenary deployments across New Eden.
+              </p>
+              <p>
                 If you are not currently in contact with a recruiter, please
-                join the channel “Straylight Systems Public” in game to get an
-                interview (quick chat). Until you have been notified otherwise
-                please stay in the public channel.
+                join the channel <strong>Straylight Systems Public</strong> in
+                game to get an interview. It's important that you stick around
+                in that channel until your application process is complete.
               </p>
               <p>
                 Since you’re reading this outside the realm of New Eden, you can
-                also get in touch with us on Slack. You can obtain an invite
-                here: http://slack.straylight.systems.
+                also get in touch with us on{' '}
+                <a href="http://slack.straylight.systems" target="_blank">
+                  Slack.
+                </a>
               </p>
             </div>
           </div>
