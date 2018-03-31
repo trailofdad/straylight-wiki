@@ -35,9 +35,19 @@ class Index extends React.Component {
           ]}
         />
         <section>
-          <div className="container p-0">
+          <div className="container">
             <h1>A squadron worth fighting for</h1>
             <p className="lead text-muted">Often outmanned, never outgunned.</p>
+
+            <div>
+              <a
+                href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                Watch the trailer
+              </a>
+            </div>
           </div>
         </section>
       </div>

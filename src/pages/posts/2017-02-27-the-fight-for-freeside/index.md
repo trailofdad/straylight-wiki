@@ -23,9 +23,8 @@ Insurrection, the aggressors, had joined the infamous Mercenary Coalition mere h
 
 Freeside – our first colonization effort – lives on, and in its wake, the future of our young enterprise surges forward. Each and every Straylight pilot plays an important role in this endeavour.
 
-Long Live The Empress,
-
-Straylight Command
+Chad VanGaalen  
+<small class="text-primary">Straylight Command</small>
 
 ## Battle analysis
 * https://zkillboard.com/related/30003564/201702220200/

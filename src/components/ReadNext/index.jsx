@@ -14,10 +14,11 @@ class ReadNext extends React.Component {
         <hr className="border-primary" />
         <p>
           {title}
-          <Link to="/profile/">
-            <br />
-            As reported by <strong>{author}</strong>
-          </Link>
+          <br />
+          Watch our{' '}
+          <a href="https://www.youtube.com/watch?v=b4SfPGib7VQ" target="_blank">
+            2018 Recruitment Trailer.
+          </a>
         </p>
       </div>
     )
