@@ -38,6 +38,17 @@ class Apply extends React.Component {
           <div className="container p-0">
             <h1>Apply</h1>
             <p className="lead text-muted">Your home among the stars awaits.</p>
+            <p>
+              <a
+                href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
+                title="2018 Recruitment Trailer"
+              >
+                <img
+                  src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
+                  alt="Watch our new recruitment reel"
+                />
+              </a>
+            </p>
             <div>
               <p>
                 If you're a positive individual seeking something more rewarding

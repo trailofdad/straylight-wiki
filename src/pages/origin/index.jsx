@@ -92,7 +92,7 @@ class Origin extends React.Component {
                 Empowered by their newfound devotion, they venture onward, on a
                 path to create experiences of meaning, hope, and valour. The
                 Straylight fold has been solidified, and the greatest adventure
-                is about to unfold.
+                is about to begin.
               </p>
             </div>
           </div>
