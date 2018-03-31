@@ -7,5 +7,14 @@
   }
 
   @media screen and (max-width: 1023px) {
+    .navbar-brand {
+      letter-spacing: 2px;
+      margin-right: 0.25rem;
+    }
+
+    &.navbar-expand .navbar-nav .nav-link {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
   }
 }

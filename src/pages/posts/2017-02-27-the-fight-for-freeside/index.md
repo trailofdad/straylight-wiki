@@ -27,7 +27,7 @@ Chad VanGaalen
 <small class="text-primary">Straylight Command</small>
 
 ## Battle analysis
-* https://zkillboard.com/related/30003564/201702220200/
+* [zKillboard](https://zkillboard.com/related/30003564/201702220200/)
 
 ## Awards issued
 * Lieutenant Quotark _Distinguished Service Medal, Promoted to Lieutenant_
