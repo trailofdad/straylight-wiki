@@ -4,6 +4,10 @@
 section {
   padding: 60px 0 100px;
 
+  @media screen and (max-width: 768px) {
+    padding: 40px 20px;
+  }
+
   &.jumboimage {
     background-size: cover;
     background-position: center;

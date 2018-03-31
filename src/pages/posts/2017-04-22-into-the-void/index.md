@@ -27,4 +27,4 @@ As our numbers continue to grow, with a couple of New Eden veterans joining the 
 [Join us.](/apply)
 
 Chad VanGaalen  
-<small>Straylight Command</small>
+<small class="text-primary">Straylight Command</small>

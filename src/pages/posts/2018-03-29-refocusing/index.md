@@ -33,4 +33,4 @@ The only thing we need now is more pilots like the ones we already have.
 [Maybe that's you.](/apply)
 
 Chad VanGaalen  
-<small>Straylight Command</small>
+<small class="text-primary">Straylight Command</small>
