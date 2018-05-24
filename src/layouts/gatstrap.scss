@@ -26,7 +26,6 @@ $enable-shadows: true !default;
 $enable-gradients: true !default;
 $enable-transitions: true !default;
 $enable-hover-media-query: false !default;
-
 $enable-grid-classes: true !default;
 $enable-print-styles: true !default;
 // Grid containers
@@ -47,7 +46,6 @@ $inverse-color: $gray-900 !default;
 // Style anchor elements.
 $link-decoration: none !default;
 $link-hover-decoration: none !default;
-
 // Fonts
 @import './fonts.scss';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
@@ -92,14 +90,6 @@ p {
 img {
   margin-bottom: 20px;
   max-width: 100%;
-  filter: sepia(100%);
-  transition: filter 375ms linear, transform 175ms linear;
-  &:hover {
-    filter: sepia(
-      0%
-    ); /* TODO: On click via class, less obnoxious
-    transform: scale3d(1.1, 1.1, 1.1); */
-  }
 }
 ul {
   list-style-type: none;

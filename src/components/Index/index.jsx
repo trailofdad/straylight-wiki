@@ -42,7 +42,7 @@ class Index extends React.Component {
             <div>
               <a
                 href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
-                class="btn btn-primary"
+                class="btn btn-secondary"
                 target="_blank"
               >
                 Watch the trailer
