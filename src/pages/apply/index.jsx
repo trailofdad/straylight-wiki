@@ -40,12 +40,12 @@ class Apply extends React.Component {
             <p className="lead text-muted">Your home among the stars awaits.</p>
             <p>
               <a
-                href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
-                title="2018 Recruitment Trailer"
+                href="https://www.youtube.com/watch?v=diFsV8f-FXY"
+                title="Who Dares Wins."
               >
                 <img
-                  src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
-                  alt="Watch our new recruitment reel"
+                  src="https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg"
+                  alt="Watch our new video"
                 />
               </a>
             </p>
@@ -70,6 +70,17 @@ class Apply extends React.Component {
                 </a>
               </p>
             </div>
+            <p>
+              <a
+                href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
+                title="2018 Recruitment Trailer"
+              >
+                <img
+                  src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
+                  alt="Watch our new recruitment reel"
+                />
+              </a>
+            </p>
           </div>
         </section>
       </div>
