@@ -10,7 +10,7 @@ categories:
 description: 
 ---
 
-![](../img/2018.05.17.22.26.08.png)
+![](https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg)
 
 _This is a first-person account of a fleet engagement that appears in our latest video, [Who Dares Wins.](https://www.youtube.com/watch?v=diFsV8f-FXY)_
 
