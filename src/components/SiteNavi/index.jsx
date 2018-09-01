@@ -60,6 +60,17 @@ class SiteNavi extends React.Component {
                   Apply
                 </Link>
               </li>
+              <li
+                className={
+                  location.pathname === '/protocol/'
+                    ? 'nav-item active'
+                    : 'nav-item'
+                }
+              >
+                <Link to="/protocol/" className="nav-link">
+                  Protocol
+                </Link>
+              </li>
               {/* WIP - conditionally display wiki
               <li className="nav-item dropdown">
                 <a
