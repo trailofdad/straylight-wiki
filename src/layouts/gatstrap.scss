@@ -17,7 +17,7 @@ $theme-colors: (
   warning: $yellow,
   danger: $red,
   light: $gray-200,
-  dark: $gray-900
+  dark: $gray-900,
 ) !default;
 // Options
 // Quickly modify global styling by enabling or disabling optional features.
@@ -34,7 +34,7 @@ $container-max-widths: (
   sm: 540px,
   md: 640px,
   lg: 740px,
-  xl: 840px
+  xl: 840px,
 ) !default;
 // Body
 // Settings for the `<body>` element.
@@ -103,7 +103,7 @@ ul {
   }
 }
 .with-background {
-  background: $gray-900 url(/img/cover.png) center center/cover no-repeat fixed;
+  background: $gray-900 url(/img/cover.jpg) center center/cover no-repeat fixed;
   height: 100%;
 }
 .text-muted {

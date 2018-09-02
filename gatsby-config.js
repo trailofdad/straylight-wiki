@@ -73,6 +73,14 @@ module.exports = {
         mergeCachingHeaders: true,
       },
     },
+    {
+      resolve: `gatsby-source-ghost`,
+      options: {
+        apiUrl: `https://api.straylight.systems`,
+        clientId: `ghost-frontend`,
+        clientSecret: `5a010d9f328f`,
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
