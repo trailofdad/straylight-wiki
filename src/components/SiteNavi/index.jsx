@@ -1,10 +1,68 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import axios from 'axios'
 import './style.scss'
 
 class SiteNavi extends React.Component {
+  // TODO: This should be extracted to a service and should happen much earlier in the runtime
+  componentDidMount() {
+    axios
+      .get('https://auth.straylight.systems/whoami', { withCredentials: true })
+      .then(res => {
+        if (res && res.status === 200 && res.data) this.setState(res.data)
+      })
+      .catch(e => {
+        console.warn(e)
+
+        // TODO: pretty crude, but it works when you don't know shit about routing in gatsby/react
+        if (window.location.href.includes('protocol'))
+          window.location.href = '/'
+      })
+  }
+
   render() {
     const { location, title } = this.props
+    let authOrProtocolLink, applyLink
+
+    // TODO: abstract to components
+    if (this.state && this.state.isStraylight) {
+      authOrProtocolLink = (
+        <li
+          className={
+            location.pathname === '/protocol/' ? 'nav-item active' : 'nav-item'
+          }
+        >
+          <Link to="/protocol/" className="nav-link">
+            Protocol
+          </Link>
+        </li>
+      )
+    } else {
+      authOrProtocolLink = (
+        <li className="nav-item">
+          <a
+            href="https://auth.straylight.systems/authorize"
+            className="nav-link"
+            target="_self"
+          >
+            Login
+          </a>
+        </li>
+      )
+
+      applyLink = (
+        <li
+          className={
+            location.pathname === '/apply/' ? 'nav-item active' : 'nav-item'
+          }
+        >
+          <Link to="/apply/" className="nav-link">
+            Apply
+          </Link>
+        </li>
+      )
+    }
+
     return (
       <nav className="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bg-primary">
         <div className="container">
@@ -49,29 +107,12 @@ class SiteNavi extends React.Component {
                   Kills
                 </a>
               </li>
-              <li
-                className={
-                  location.pathname === '/apply/'
-                    ? 'nav-item active'
-                    : 'nav-item'
-                }
-              >
-                <Link to="/apply/" className="nav-link">
-                  Apply
-                </Link>
-              </li>
-              <li
-                className={
-                  location.pathname === '/protocol/'
-                    ? 'nav-item active'
-                    : 'nav-item'
-                }
-              >
-                <Link to="/protocol/" className="nav-link">
-                  Protocol
-                </Link>
-              </li>
-              {/* WIP - conditionally display wiki
+
+              {applyLink}
+
+              {authOrProtocolLink}
+
+              {/* TODO - maybe use a dropdown for protocol in the future
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"

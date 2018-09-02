@@ -44,7 +44,7 @@ class Index extends React.Component {
             <div>
               <a
                 href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
-                class="btn btn-outline-primary"
+                className="btn btn-outline-primary"
                 target="_blank"
               >
                 Watch the trailer
