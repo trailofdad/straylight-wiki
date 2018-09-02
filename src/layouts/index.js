@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { siteMetadata } from '../../gatsby-config'
-import SiteNavi from '../components/SiteNavi'
 import emergence from 'emergence.js'
 
 import './gatstrap.scss'
@@ -10,9 +9,16 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'devicon-2.2/devicon.min.css'
 import 'font-awesome/css/font-awesome.css'
 
+import SiteNavi from '../components/SiteNavi'
+import Session from '../services/session'
+
 class Template extends React.Component {
-  componentDidMount() {
+  async componentDidMount() {
     emergence.init()
+
+    await Session.initialize()
+
+    this.setState(Session.state)
   }
 
   componentDidUpdate() {
@@ -21,9 +27,14 @@ class Template extends React.Component {
 
   render() {
     const { location, children } = this.props
+
     return (
       <div className={location.pathname === '/' ? 'with-background' : ''}>
-        <SiteNavi title={siteMetadata.title} {...this.props} />
+        <SiteNavi
+          session={this.state}
+          title={siteMetadata.title}
+          {...this.props}
+        />
         {children()}
       </div>
     )
