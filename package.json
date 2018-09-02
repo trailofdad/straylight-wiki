@@ -5,6 +5,9 @@
   "author": "Christian Hapgood <christian.hapgood@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
     "gatsby": "^1.9.130",
     "gatsby-link": "^1.6.31",
     "gatsby-plugin-catch-links": "^1.0.14",

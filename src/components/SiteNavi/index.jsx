@@ -1,31 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import axios from 'axios'
+
+import AuthApi from '../../services/auth'
+import PilotMenu from '../PilotMenu'
+
 import './style.scss'
 
-class SiteNavi extends React.Component {
-  // TODO: This should be extracted to a service and should happen much earlier in the runtime
-  componentDidMount() {
-    axios
-      .get('https://auth.straylight.systems/whoami', { withCredentials: true })
-      .then(res => {
-        if (res && res.status === 200 && res.data) this.setState(res.data)
-      })
-      .catch(e => {
-        console.warn(e)
+const deauth = () => {
+  window.location.href = '/'
+}
 
-        // TODO: pretty crude, but it works when you don't know shit about routing in gatsby/react
-        if (window.location.href.includes('protocol'))
-          window.location.href = '/'
-      })
+class SiteNavi extends React.Component {
+  logout() {
+    AuthApi.get('/logout')
+      .then(deauth)
+      .catch(deauth)
   }
 
   render() {
-    const { location, title } = this.props
-    let authOrProtocolLink, applyLink
+    const { location, title, session } = this.props
+    let authOrProtocolLink, applyLink, pilotName
+
+    let isAuthorized = session && session.isStraylight
 
     // TODO: abstract to components
-    if (this.state && this.state.isStraylight) {
+    if (isAuthorized) {
+      pilotName = session.name
+
       authOrProtocolLink = (
         <li
           className={
@@ -41,7 +43,7 @@ class SiteNavi extends React.Component {
       authOrProtocolLink = (
         <li className="nav-item">
           <a
-            href="https://auth.straylight.systems/authorize"
+            href={process.env.AUTH_URL + '/authorize'}
             className="nav-link"
             target="_self"
           >
@@ -75,7 +77,7 @@ class SiteNavi extends React.Component {
             </h1>
           </Link>
           <div className="navbar-nav-scroll">
-            <ul className="navbar-nav bd-navbar-nav flex-row">
+            <ul className="navbar-nav bd-navbar-nav flex-row mr-auto">
               <li
                 className={
                   location.pathname === '/journal/'
@@ -111,34 +113,15 @@ class SiteNavi extends React.Component {
               {applyLink}
 
               {authOrProtocolLink}
-
-              {/* TODO - maybe use a dropdown for protocol in the future
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="http://example.com"
-                  id="dropdown01"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Wiki
-                </a>
-                <div className="dropdown-menu" aria-labelledby="dropdown01">
-                  <a className="dropdown-item" href="#">
-                    Doctrines
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Making ISK
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Communications
-                  </a>
-                </div>
-              </li> */}
             </ul>
           </div>
-          <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
+          <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <PilotMenu
+              isAuthorized={isAuthorized}
+              pilotName={pilotName}
+              logout={this.logout}
+            />
+          </div>
         </div>
       </nav>
     )
