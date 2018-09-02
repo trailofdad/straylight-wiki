@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "Christian Hapgood <christian.hapgood@gmail.com>",
   "dependencies": {
+    "axios": "^0.18.0",
     "gatsby": "^1.9.130",
     "gatsby-link": "^1.6.31",
     "gatsby-plugin-catch-links": "^1.0.14",
@@ -26,6 +27,7 @@
     "gatsby-remark-responsive-iframe": "^1.4.16",
     "gatsby-remark-smartypants": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.10",
+    "gatsby-source-ghost": "^2.1.1",
     "gatsby-transformer-remark": "^1.7.24",
     "gatsby-transformer-sharp": "^1.6.16",
     "lodash": "^4.17.4",
