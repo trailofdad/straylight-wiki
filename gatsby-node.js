@@ -23,8 +23,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const pages = []
     const blogPost = path.resolve('./src/templates/blog-post.js')
     const protocolPost = path.resolve('./src/templates/protocol-post.js')
+    const protocolTag = path.resolve('./src/templates/protocol-tag.js')
 
     resolve([
+      // All static pages
       graphql(
         `
           {
@@ -56,6 +58,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           })
         })
       }),
+
+      // All Ghost posts
       graphql(
         `
           {
@@ -74,11 +78,42 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
+        // Create page for each post
         _.each(result.data.allGhostPost.edges, edge => {
           createPage({
             path: `/protocol/${edge.node.slug}`,
             component: protocolPost,
+            context: {
+              slug: edge.node.slug,
+            },
+          })
+        })
+      }),
+
+      // All Ghost tags
+      graphql(
+        `
+          {
+            allGhostTag {
+              edges {
+                node {
+                  slug
+                }
+              }
+            }
+          }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+
+        // Create page for each tag
+        _.each(result.data.allGhostTag.edges, edge => {
+          createPage({
+            path: `/protocol/${edge.node.slug}`,
+            component: protocolTag,
             context: {
               slug: edge.node.slug,
             },

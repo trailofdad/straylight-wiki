@@ -7,8 +7,6 @@ import ProtocolPost from '../components/ProtocolPost'
 
 class ProtocolPostTemplate extends React.Component {
   render() {
-    console.log(this.props.data)
-
     const post = get(this, 'props.data.ghost.posts[0].post')
     const site = get(this, 'props.data.site')
     const title = get(post, 'title')

@@ -20,7 +20,7 @@ class SiteNavi extends React.Component {
 
   render() {
     const { location, title, session } = this.props
-    let authOrProtocolLink, applyLink, pilotName
+    let protocolLink, applyLink, pilotName
 
     let isAuthorized = session && session.isStraylight
 
@@ -28,10 +28,12 @@ class SiteNavi extends React.Component {
     if (isAuthorized) {
       pilotName = session.name
 
-      authOrProtocolLink = (
+      protocolLink = (
         <li
           className={
-            location.pathname === '/protocol/' ? 'nav-item active' : 'nav-item'
+            location.pathname.includes('/protocol/')
+              ? 'nav-item active'
+              : 'nav-item'
           }
         >
           <Link to="/protocol/" className="nav-link">
@@ -40,18 +42,6 @@ class SiteNavi extends React.Component {
         </li>
       )
     } else {
-      authOrProtocolLink = (
-        <li className="nav-item">
-          <a
-            href={process.env.AUTH_URL + '/authorize'}
-            className="nav-link"
-            target="_self"
-          >
-            Login
-          </a>
-        </li>
-      )
-
       applyLink = (
         <li
           className={
@@ -112,7 +102,7 @@ class SiteNavi extends React.Component {
 
               {applyLink}
 
-              {authOrProtocolLink}
+              {protocolLink}
             </ul>
           </div>
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
