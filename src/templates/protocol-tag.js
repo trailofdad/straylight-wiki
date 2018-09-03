@@ -5,16 +5,27 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-import ProtocolPost from '../../components/ProtocolPost'
-import ProtocolMenu from '../../components/ProtocolMenu'
+import ProtocolPost from '../components/ProtocolPost'
+import ProtocolMenu from '../components/ProtocolMenu'
 
-class ProtocolEntry extends React.Component {
+class ProtocolTagTemplate extends React.Component {
   render() {
     const site = get(this, 'props.data.site.siteMetadata')
-    const posts = get(this, 'props.data.postResource.posts')
     const tags = get(this, 'props.data.tagResource.tags')
+    const slug = get(this, 'props.pathContext.slug')
+    let posts = get(this, 'props.data.postResource.posts')
 
     const pageLinks = []
+
+    // We have to do this here for now instead of the query
+    // due to a bug in Gatsby: https://github.com/gatsbyjs/gatsby/issues/4799
+    posts = posts.filter(node => {
+      let isIncluded = node.post.tags.filter(tag => tag.slug === slug).length
+
+      if (isIncluded) {
+        return node
+      }
+    })
 
     if (posts) {
       posts.map((data, i) => {
@@ -24,6 +35,8 @@ class ProtocolEntry extends React.Component {
           </LazyLoad>
         )
       })
+    } else {
+      pageLinks.push(<p>No items in this section.</p>)
     }
 
     return (
@@ -44,7 +57,7 @@ class ProtocolEntry extends React.Component {
           ]}
         />
         <section>
-          <ProtocolMenu tags={tags} />
+          <ProtocolMenu tags={tags} slug={slug} />
           {pageLinks}
         </section>
       </div>
@@ -52,20 +65,10 @@ class ProtocolEntry extends React.Component {
   }
 }
 
-export default ProtocolEntry
+export default ProtocolTagTemplate
 
 export const pageQuery = graphql`
-  query ProtocolQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        url: siteUrl
-        author
-        twitter
-        adsense
-      }
-    }
+  query ProtocolTagQuery {
     tagResource: allGhostTag {
       tags: edges {
         tag: node {
@@ -82,6 +85,11 @@ export const pageQuery = graphql`
           slug
           title
           html
+          tags {
+            id
+            name
+            slug
+          }
           published_at(formatString: "YYYY/MM/DD")
         }
       }

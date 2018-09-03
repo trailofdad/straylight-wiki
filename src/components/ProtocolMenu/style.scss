@@ -1,0 +1,5 @@
+@import '../../layouts/colors.scss';
+
+.nav-item:not(.active) a {
+  color: $gray-600;
+}
