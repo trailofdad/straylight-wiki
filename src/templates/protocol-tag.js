@@ -57,7 +57,7 @@ class ProtocolTagTemplate extends React.Component {
           ]}
         />
         <section>
-          <ProtocolMenu tags={tags} slug={slug} />
+          <ProtocolMenu tags={tags} slug={slug} {...this.props} />
           {pageLinks}
         </section>
       </div>

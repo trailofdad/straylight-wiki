@@ -44,7 +44,7 @@ class ProtocolEntry extends React.Component {
           ]}
         />
         <section>
-          <ProtocolMenu tags={tags} />
+          <ProtocolMenu tags={tags} {...this.props} />
           {pageLinks}
         </section>
       </div>

@@ -6,6 +6,8 @@ import './style.scss'
 
 class ProtocolMenu extends React.Component {
   render() {
+    const { location } = this.props
+
     let links = []
     let tags = get(this, 'props.tags')
     let slug = get(this, 'props.slug')
