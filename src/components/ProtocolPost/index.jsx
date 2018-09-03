@@ -46,7 +46,7 @@ class SitePost extends React.Component {
   render() {
     const { site, data, isIndex } = this.props
     const title = get(data, 'title')
-    const path = get(data, 'slug')
+    const path = `/protocol/${get(data, 'slug')}`
     const date = get(data, 'published_at')
     const html = get(data, 'html')
     const description =

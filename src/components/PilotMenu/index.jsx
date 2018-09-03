@@ -7,7 +7,19 @@ class PilotMenu extends React.Component {
   render() {
     const { isAuthorized, pilotName, logout } = this.props
 
-    if (!isAuthorized) return null
+    if (!isAuthorized) {
+      return (
+        <li className="nav-item">
+          <a
+            href={process.env.AUTH_URL + '/authorize'}
+            className="nav-link"
+            target="_self"
+          >
+            Login
+          </a>
+        </li>
+      )
+    }
 
     return (
       <li className="nav-item dropdown">
