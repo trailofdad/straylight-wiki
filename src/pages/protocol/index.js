@@ -18,15 +18,32 @@ class ProtocolEntry extends React.Component {
   render() {
     const site = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.postResource.posts')
+    const featuredPosts = get(this, 'props.data.featuredPostResource.posts')
     const tags = get(this, 'props.data.tagResource.tags')
     const authors = get(this, 'props.data.authorResource.authors')
 
     const pageLinks = []
 
+    if (featuredPosts) {
+      featuredPosts.map((data, i) => {
+        pageLinks.push(
+          <LazyLoad height={500} offset={500} once={true} key={i}>
+            <ProtocolPost
+              data={data.post}
+              site={site}
+              author={this.getAuthor(data.post.author, authors)}
+              isIndex={true}
+              key={i}
+            />
+          </LazyLoad>
+        )
+      })
+    }
+
     if (posts) {
       posts.map((data, i) => {
         pageLinks.push(
-          <LazyLoad height={500} offset={500} once={true} key={i}>
+          <LazyLoad height={500} offset={500} once={true} key={i + 1}>
             <ProtocolPost
               data={data.post}
               site={site}
@@ -88,7 +105,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    postResource: allGhostPost(sort: { order: DESC, fields: [published_at] }) {
+    postResource: allGhostPost(
+      sort: { order: DESC, fields: [published_at] }
+      filter: { featured: { eq: false } }
+    ) {
       posts: edges {
         post: node {
           id
@@ -97,6 +117,27 @@ export const pageQuery = graphql`
           html
           published_at(formatString: "YYYY/MM/DD")
           author
+          tags {
+            id
+            name
+            slug
+          }
+        }
+      }
+    }
+    featuredPostResource: allGhostPost(
+      sort: { order: DESC, fields: [published_at] }
+      filter: { featured: { eq: true } }
+    ) {
+      posts: edges {
+        post: node {
+          id
+          slug
+          title
+          html
+          published_at(formatString: "YYYY/MM/DD")
+          author
+          featured
           tags {
             id
             name

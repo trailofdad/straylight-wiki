@@ -87,6 +87,7 @@ export const pageQuery = graphql`
           html
           published_at(formatString: "YYYY/MM/DD")
           author
+          featured
           tags {
             id
             name

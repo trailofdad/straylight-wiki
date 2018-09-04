@@ -30,7 +30,7 @@ class ProtocolPost extends React.Component {
     return test
   }
 
-  categories(data) {
+  categories(data, isFeatured) {
     const categories = []
     forEach(data, (item, i) => {
       categories.push(
@@ -39,6 +39,13 @@ class ProtocolPost extends React.Component {
         </small>
       )
     })
+
+    if (isFeatured)
+      categories.push(
+        <small className="text-primary text-uppercase px-1" key="-1">
+          Featured
+        </small>
+      )
     return categories
   }
 
@@ -51,6 +58,7 @@ class ProtocolPost extends React.Component {
     const description = this.description(html)
     const tags = get(data, 'tags')
     const isMore = isIndex && !!html.match('<!--more-->')
+    const isFeatured = get(data, 'featured')
     const ad = isIndex ? (
       ''
     ) : (
@@ -68,7 +76,7 @@ class ProtocolPost extends React.Component {
               <img className="author-image" src={author.profile_image} />
               <small className="author">{author ? author.name : ''}</small>
               <time dateTime={date}>{date}</time>
-              {this.categories(tags)}
+              {this.categories(tags, isFeatured)}
             </div>
             {ad}
             <div

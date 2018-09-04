@@ -104,6 +104,7 @@ export const pageQuery = graphql`
             name
             slug
           }
+          featured
           published_at(formatString: "YYYY/MM/DD")
         }
       }
