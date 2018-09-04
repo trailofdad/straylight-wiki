@@ -10,11 +10,11 @@ categories:
 description: 
 ---
 
-At the start of YC119, when Damian and I founded Straylight, we had an appetite for something different stayed by realistic expectations.
-
 ![Regrouping after a drop](../img/2017.09.27.20.58.01-1024x576.png)
 
-Then we grew, and that started to shift - it was clear that there was enormous potential in each pilot that joined our side. The momentum kept piling. Soon we found ourselves with nearly 60 in our ranks.
+At the start of YC119, when Damian and I founded Straylight, we had an appetite for something different stayed by realistic expectations. Then we grew, and that started to shift - it was clear that there was enormous potential in each pilot that joined our side. The momentum kept piling. Soon we found ourselves with nearly 60 in our ranks.
+
+<!--more-->
 
 Alas, this was never meant to be a megacorp, and it likely never will be. Straylight is family. Our identity was planted early on as a small but capabale squad, and our endgame doesn't look much different from that. I don't ever want to be in fleet with someone I don't know.
 

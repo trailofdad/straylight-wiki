@@ -9,9 +9,11 @@ categories:
 description: Last night, in a turn of circumstance that would have been impossible to predict, pilots of the Straylight endured and successfully warded off a third attack on Freeside, destroying an enemy dreadnaught while suffering no losses.
 ---
 
+![](../img/Moros.jpg)
+
 Last night, in a turn of circumstance that would have been impossible to predict, pilots of the Straylight endured and successfully warded off a third attack on Freeside, destroying an enemy dreadnaught while suffering no losses.
 
-![](../img/Moros.jpg)
+<!--more-->
 
 It was an undertaking that could only be described as a perfectly timed alignment of the stars, fusing the diplomatic efforts of Vice Admiral Damian Lansing with the strategic direction of Straylight Command.
 

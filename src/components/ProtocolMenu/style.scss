@@ -1,5 +1,18 @@
 @import '../../layouts/colors.scss';
 
-.nav-item:not(.active) a {
-  color: $gray-600;
+.ProtocolMenu {
+  margin: -20px auto 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .nav-item {
+    text-transform: uppercase;
+  }
+
+  .nav-item:not(.active) a {
+    color: $gray-600;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
 }
