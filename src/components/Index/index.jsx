@@ -35,7 +35,7 @@ class Index extends React.Component {
           ]}
         />
         <section>
-          <div className="container p-0">
+          <div className="container p-0 pt-3 mt-5">
             <h1>A squadron worth fighting for</h1>
             <p className="lead text-primary">
               Often outmanned, never outgunned.

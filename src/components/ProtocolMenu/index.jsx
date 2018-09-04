@@ -11,6 +11,7 @@ class ProtocolMenu extends React.Component {
     let links = []
     let tags = get(this, 'props.tags')
     let slug = get(this, 'props.slug')
+    let postTag = get(this, 'props.postTag')
 
     if (!tags || !tags.length) return null
 
@@ -27,11 +28,17 @@ class ProtocolMenu extends React.Component {
       </li>
     )
 
+    tags.sort((a, b) => a.tag.name.localeCompare(b.tag.name))
+
     tags.map((data, i) => {
       links.push(
         <li
           key={i + 1}
-          className={data.tag.slug === slug ? 'nav-item active' : 'nav-item'}
+          className={
+            data.tag.slug === slug || data.tag.slug === postTag
+              ? 'nav-item active'
+              : 'nav-item'
+          }
         >
           <Link to={`/protocol/${data.tag.slug}/`} className="nav-link">
             {data.tag.name}
@@ -41,8 +48,8 @@ class ProtocolMenu extends React.Component {
     })
 
     return (
-      <div className="container p-0 mb-5">
-        <ul className="nav flex-row justify-content-center">{links}</ul>
+      <div className="ProtocolMenu container p-0">
+        <ul className="nav flex-row">{links}</ul>
       </div>
     )
   }
