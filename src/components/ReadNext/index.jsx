@@ -7,10 +7,9 @@ class ReadNext extends React.Component {
   render() {
     const data = this.props.data
     const title = get(data, 'meta.title')
-    const author = get(data, 'meta.author')
 
     return (
-      <div className="footer">
+      <div className="footer mt-5">
         <hr className="border-primary" />
         <p>
           {title}

@@ -10,9 +10,11 @@ categories:
 description: New fronts, new pilots and new action. It’s been our most pivotal and exciting month yet.
 ---
 
+![](../img/2017.04.17.13.47.37-1024x576.png)
+
 New fronts, new pilots and new action. It’s been our most pivotal and exciting month yet.
 
-![](../img/2017.04.17.13.47.37-1024x576.png)
+<!--more-->
 
 Unsatisfied with the developments on the Amarrian war front, we decided to shift our focus with an expansion of our area of operations extending to the Stain region.
 

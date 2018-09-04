@@ -7,15 +7,16 @@ categories:
   - Announcement
   - Corp History
   - Battle Report
-description: 
+description: This is a first-person account of a fleet engagement that appears in our latest video, [Who Dares Wins.](https://www.youtube.com/watch?v=diFsV8f-FXY).
 ---
 
 ![](https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg)
 
 _This is a first-person account of a fleet engagement that appears in our latest video, [Who Dares Wins.](https://www.youtube.com/watch?v=diFsV8f-FXY)_
 
-## Background
 Player-built structures, despite their sometimes insignificant tactical value, often make for excellent opportunities of escalation in Metropolis. SAS was not involved in the initial siege of these structures, nor did we own them - but we seized the chance to engage from the perspective of a third party contributing to chaos.
+
+<!--more-->
 
 [The initial engagement](https://br.inyour.space/?s=2723&b=8086210&e=775&t=yvvLz) took place several jumps away in Otou, near our Sinq Laison base of operations. Panic Attack attempted to defend the first office with a small fleet of Typhoons, while we had scrambled Muninns. They were swiftly dropped by a combined VWUT/HEL/IED Thanatos fleet, and we disengaged shortly after - knowing full well that we wouldn't be able to break them in a sniper doctrine.
 

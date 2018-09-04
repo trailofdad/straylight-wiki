@@ -9,10 +9,17 @@ import ProtocolPost from '../components/ProtocolPost'
 import ProtocolMenu from '../components/ProtocolMenu'
 
 class ProtocolTagTemplate extends React.Component {
+  getAuthor(id, authors) {
+    let author = authors.find(({ author }) => author.ghostId === id)
+
+    if (author) return author.author
+  }
+
   render() {
     const site = get(this, 'props.data.site.siteMetadata')
     const tags = get(this, 'props.data.tagResource.tags')
     const slug = get(this, 'props.pathContext.slug')
+    const authors = get(this, 'props.data.authorResource.authors')
     let posts = get(this, 'props.data.postResource.posts')
 
     const pageLinks = []
@@ -31,7 +38,13 @@ class ProtocolTagTemplate extends React.Component {
       posts.map((data, i) => {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i}>
-            <ProtocolPost data={data.post} site={site} isIndex={true} key={i} />
+            <ProtocolPost
+              data={data.post}
+              site={site}
+              author={this.getAuthor(data.post.author, authors)}
+              isIndex={true}
+              key={i}
+            />
           </LazyLoad>
         )
       })
@@ -85,12 +98,22 @@ export const pageQuery = graphql`
           slug
           title
           html
+          author
           tags {
             id
             name
             slug
           }
           published_at(formatString: "YYYY/MM/DD")
+        }
+      }
+    }
+    authorResource: allGhostAuthor {
+      authors: edges {
+        author: node {
+          ghostId
+          name
+          profile_image
         }
       }
     }

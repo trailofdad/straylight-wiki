@@ -5,9 +5,8 @@ import get from 'lodash/get'
 import size from 'lodash/size'
 import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
-import './style.scss'
 
-class SitePost extends React.Component {
+class ProtocolPost extends React.Component {
   more(path) {
     return (
       <Link className="readmore" to={path}>
@@ -36,7 +35,7 @@ class SitePost extends React.Component {
     forEach(data, (item, i) => {
       categories.push(
         <small className="text-primary text-uppercase px-1" key={i}>
-          {item}
+          {item.name}
         </small>
       )
     })
@@ -44,15 +43,13 @@ class SitePost extends React.Component {
   }
 
   render() {
-    const { site, data, isIndex } = this.props
+    const { site, data, isIndex, author } = this.props
     const title = get(data, 'title')
     const path = `/protocol/${get(data, 'slug')}`
     const date = get(data, 'published_at')
     const html = get(data, 'html')
-    const description =
-      get(data, 'frontmatter.description') || this.description(html)
-    const cate =
-      get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
+    const description = this.description(html)
+    const tags = get(data, 'tags')
     const isMore = isIndex && !!html.match('<!--more-->')
     const ad = isIndex ? (
       ''
@@ -67,9 +64,11 @@ class SitePost extends React.Component {
             <div className="page-header">
               <Link style={{ boxShadow: 'none' }} to={path}>
                 <h1>{title}</h1>
-                <time dateTime={date}>{date}</time>
               </Link>
-              {this.categories(cate)}
+              <img className="author-image" src={author.profile_image} />
+              <small className="author">{author ? author.name : ''}</small>
+              <time dateTime={date}>{date}</time>
+              {this.categories(tags)}
             </div>
             {ad}
             <div
@@ -86,4 +85,4 @@ class SitePost extends React.Component {
   }
 }
 
-export default SitePost
+export default ProtocolPost
