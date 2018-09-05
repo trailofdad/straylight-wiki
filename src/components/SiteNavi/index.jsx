@@ -63,7 +63,7 @@ class SiteNavi extends React.Component {
               {title}
             </h1>
             <h1 className="navbar-brand text-primary mb-0 d-block d-md-none d-lg-none d-xl-none">
-              S-RUN
+              SS
             </h1>
           </Link>
           <div className="navbar-nav-scroll">
@@ -105,7 +105,7 @@ class SiteNavi extends React.Component {
               {protocolLink}
             </ul>
           </div>
-          <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <div className="navbar-nav flex-row ml-md-auto d-flex">
             <PilotMenu
               isAuthorized={isAuthorized}
               pilotName={pilotName}

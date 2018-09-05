@@ -1,5 +1,8 @@
+@import '../../layouts/colors.scss';
+
 .navbar {
   text-transform: uppercase;
+  border-bottom: 1px $gray-800 solid;
 
   .navbar-brand {
     letter-spacing: 5px;

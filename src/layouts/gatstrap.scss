@@ -21,9 +21,9 @@ $theme-colors: (
 ) !default;
 // Options
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-rounded: true !default;
+$enable-rounded: false !default;
 $enable-shadows: true !default;
-$enable-gradients: true !default;
+$enable-gradients: false !default;
 $enable-transitions: true !default;
 $enable-hover-media-query: false !default;
 $enable-grid-classes: true !default;
@@ -32,13 +32,13 @@ $enable-print-styles: true !default;
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
   sm: 540px,
-  md: 640px,
-  lg: 740px,
-  xl: 840px,
-) !default;
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
 // Body
 // Settings for the `<body>` element.
-$body-bg: $gray-900 !default;
+$body-bg: #101010 !default;
 $body-color: $gray-200 !default;
 $inverse-bg: $gray-200 !default;
 $inverse-color: $gray-900 !default;
@@ -110,4 +110,23 @@ ul {
 }
 .btn {
   border-radius: 0;
+}
+
+.card {
+  border-color: none;
+  border-radius: 0;
+  box-shadow: 0.25rem 0.25rem 3px rgba(0, 0, 0, 0.15);
+  transition: 250ms transform cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-img-top {
+    border-radius: 0;
+  }
+
+  .card-text {
+    color: $gray-600;
+  }
 }
