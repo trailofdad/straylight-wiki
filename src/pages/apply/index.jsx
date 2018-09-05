@@ -45,16 +45,15 @@ class Apply extends React.Component {
 
         <section className="pt-0">
           <div className="container p-0">
-            <div class="card-deck">
-              <div class="card bg-dark text-white">
-                {/* <img class="card-img-top" src="https://api.straylight.systems/content/images/2018/09/2018.09.01.02.45.16.png" alt="Card image cap" /> */}
-                <div class="card-body">
-                  <h5 class="card-title">Get in touch</h5>
-                  <p class="card-text">
+            <div className="card-deck">
+              <div className="card bg-dark text-white">
+                <div className="card-body">
+                  <h5 className="card-title">Get in touch</h5>
+                  <p className="card-text">
                     Join our channel now to speak with Straylight Command.
                   </p>
                   <a
-                    class="btn btn-outline-primary"
+                    className="btn btn-outline-primary"
                     href="http://slack.straylight.systems/"
                     target="_blank"
                   >
@@ -63,15 +62,14 @@ class Apply extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
-                {/* <img class="card-img-top" src="https://api.straylight.systems/content/images/2018/09/2017.05.27.23.38.54.png" alt="Card image cap" /> */}
-                <div class="card-body">
-                  <h5 class="card-title">Register for screening</h5>
-                  <p class="card-text">
+              <div className="card bg-dark text-white">
+                <div className="card-body">
+                  <h5 className="card-title">Register for screening</h5>
+                  <p className="card-text">
                     All you have to do is sign in to our secure, automated tool.
                   </p>
                   <a
-                    class="btn btn-outline-primary"
+                    className="btn btn-outline-primary"
                     href="https://mgmt.straylight.systems/"
                     target="_blank"
                   >
@@ -80,16 +78,15 @@ class Apply extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
-                {/* <img class="card-img-top" src="https://api.straylight.systems/content/images/2018/09/2017.02.28.02.10.30.png" alt="Card image cap" /> */}
-                <div class="card-body">
-                  <h5 class="card-title">Tell us about you</h5>
-                  <p class="card-text">
+              <div className="card bg-dark text-white">
+                <div className="card-body">
+                  <h5 className="card-title">Tell us about you</h5>
+                  <p className="card-text">
                     The last step is to have a quick chat to see if you're a
                     fit. You'll need TeamSpeak.
                   </p>
                   <a
-                    class="btn btn-outline-primary"
+                    className="btn btn-outline-primary"
                     href="ts3server://voice.straylight.systems/"
                     target="_blank"
                   >
@@ -114,16 +111,16 @@ class Apply extends React.Component {
               services and benefits:
             </p>
 
-            <div class="card-columns pt-3">
-              <div class="card bg-dark text-white">
+            <div className="card-columns pt-3">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2018.04.24.21.16.08.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Constant fleet action</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Constant fleet action</h5>
+                  <p className="card-text">
                     Everything from medium-sized doctrine fleets to small-gang
                     warfare operations occurs on the regular. Log in and join
                     the action!
@@ -131,45 +128,45 @@ class Apply extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2017.06.25.02.15.54.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Supercapital hunting</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Supercapital hunting</h5>
+                  <p className="card-text">
                     You don't need to be a part of the blob to take down some of
                     New Eden's giants. You just need to fly with us.
                   </p>
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2018.06.17.02.40.47.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">R64 moon mining operations</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">R64 moon mining operations</h5>
+                  <p className="card-text">
                     Sustain your capital deployment with a rich ecosystem of
                     moons to kick back and profit from.
                   </p>
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2017.12.02.20.09.55.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Free asset relocation</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Free asset relocation</h5>
+                  <p className="card-text">
                     You're already set up somewhere, and logistical efforts in
                     New Eden can be dangerous and time consuming. Let us handle
                     it for you.
@@ -177,30 +174,30 @@ class Apply extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2017.05.13.20.29.36.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Black Ops Training</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Black Ops Training</h5>
+                  <p className="card-text">
                     Fly alongside some of the most feared Black Ops specialists
                     in all of New Eden with our alliance, Who Dares Wins.
                   </p>
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/Eve-Online-05.10.2017---01.50.51.16.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Resupply from The Forge</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Resupply from The Forge</h5>
+                  <p className="card-text">
                     Our jump freight team is constantly running the gauntlet to
                     Jita and back to make sure you have what you need.
                   </p>
@@ -211,27 +208,27 @@ class Apply extends React.Component {
         </section>
 
         <section>
-          <div class="container p-0">
-            <h1 class="text-center">Not convinced?</h1>
+          <div className="container p-0">
+            <h1 className="text-center">Not convinced?</h1>
             <p className="lead text-center text-primary pb-4">
               Watch a video or two.
             </p>
 
-            <div class="card-deck">
-              <div class="card bg-dark text-white">
+            <div className="card-deck">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Straylight Systems Trailer</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Straylight Systems Trailer</h5>
+                  <p className="card-text">
                     Witness how the Straylight squadron works together to
                     achieve greatness throughout New Eden.
                   </p>
                   <a
-                    class="btn btn-outline-primary"
+                    className="btn btn-outline-primary"
                     href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
                     target="_blank"
                   >
@@ -240,21 +237,21 @@ class Apply extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Who Dares Wins Trailer</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Who Dares Wins Trailer</h5>
+                  <p className="card-text">
                     Who Dares Wins, our brotherhood, specializes in mercenary
                     and black ops operations - and the occasional capital
                     slugfest, when the need arises.
                   </p>
                   <a
-                    class="btn btn-outline-primary"
+                    className="btn btn-outline-primary"
                     href="https://www.youtube.com/watch?v=diFsV8f-FXY"
                     target="_blank"
                   >

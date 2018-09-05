@@ -1,11 +1,10 @@
 import React from 'react'
-import axios from 'axios'
 
 import './style.scss'
 
 class PilotMenu extends React.Component {
   render() {
-    const { isAuthorized, pilotName, logout } = this.props
+    const { isAuthorized, pilotName, pilotId, logout } = this.props
 
     if (!isAuthorized) {
       return (
@@ -33,7 +32,28 @@ class PilotMenu extends React.Component {
         >
           {pilotName}
         </a>
-        <div className="dropdown-menu" aria-labelledby="dropdown01">
+        <div className="dropdown-menu bg-dark" aria-labelledby="dropdown01">
+          <a
+            className="dropdown-item"
+            href={`https://zkillboard.com/character/${pilotId}/`}
+            target="_blank"
+          >
+            My kills
+          </a>
+          <a
+            className="dropdown-item"
+            href="https://mgmt.straylight.systems"
+            target="_blank"
+          >
+            Launch SEAT
+          </a>
+          <a
+            className="dropdown-item"
+            href="ts3server://voice.straylight.systems"
+            target="_blank"
+          >
+            Launch TS3
+          </a>
           <a className="dropdown-item" href="#" onClick={logout}>
             Logout
           </a>

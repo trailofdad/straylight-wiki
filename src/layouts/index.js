@@ -35,7 +35,7 @@ class Template extends React.Component {
           title={siteMetadata.title}
           {...this.props}
         />
-        {children()}
+        {this.state ? children() : ''}
       </div>
     )
   }
