@@ -249,8 +249,8 @@ class Apply extends React.Component {
                 <div class="card-body">
                   <h5 class="card-title">Who Dares Wins Trailer</h5>
                   <p class="card-text">
-                    Straylight pilots rely on experience and strategy to
-                    outsmart, outclass and outplay the enemy.
+                    Who Dares Wins specializes in mercenary and black ops
+                    operations.
                   </p>
                   <a
                     class="btn btn-outline-primary"
