@@ -227,8 +227,8 @@ class Apply extends React.Component {
                 <div class="card-body">
                   <h5 class="card-title">Straylight Systems Trailer</h5>
                   <p class="card-text">
-                    Straylight pilots rely on experience and strategy to
-                    outsmart, outclass and outplay the enemy.
+                    Witness how the Straylight squadron works together to
+                    achieve greatness throughout New Eden.
                   </p>
                   <a
                     class="btn btn-outline-primary"
@@ -249,8 +249,9 @@ class Apply extends React.Component {
                 <div class="card-body">
                   <h5 class="card-title">Who Dares Wins Trailer</h5>
                   <p class="card-text">
-                    Who Dares Wins specializes in mercenary and black ops
-                    operations.
+                    Who Dares Wins, our brotherhood, specializes in mercenary
+                    and black ops operations - and the occasional capital
+                    slugfest, when the need arises.
                   </p>
                   <a
                     class="btn btn-outline-primary"

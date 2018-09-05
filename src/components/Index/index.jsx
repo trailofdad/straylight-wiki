@@ -51,7 +51,7 @@ class Index extends React.Component {
               </a>
               <a
                 href="/apply"
-                className="btn btn-outline-secondary ml-1 ml-md-3"
+                className="btn btn-outline-light ml-1 ml-md-3"
                 target="_self"
               >
                 Apply today
