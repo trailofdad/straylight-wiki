@@ -7,6 +7,7 @@ import LazyLoad from 'react-lazyload'
 
 import ProtocolCard from '../../components/ProtocolCard'
 import ProtocolMenu from '../../components/ProtocolMenu'
+import Session from '../../services/session'
 
 class ProtocolEntry extends React.Component {
   getAuthor(id, authors) {
@@ -16,6 +17,8 @@ class ProtocolEntry extends React.Component {
   }
 
   render() {
+    if (!Session.state || !Session.state.isInitialized) return null
+
     const site = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.postResource.posts')
     const featuredPosts = get(this, 'props.data.featuredPostResource.posts')
