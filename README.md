@@ -1,4 +1,3 @@
-# straylight-wiki
+# Straylight Systems
 
-straylight wiki using gatstrap starter
-(Bootstrap for Gatsby)
+The official website of Straylight Systems.

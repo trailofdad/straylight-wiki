@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Straylight Systems',
-    description: 'A wiki for Straylight Systems',
-    siteUrl: '',
+    description: 'The official website of the Straylight.',
+    siteUrl: 'https://straylight.systems/',
     author: 'Straylight Command',
     twitter: '',
     adsense: '',
@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
+        name: 'Straylight Systems',
+        short_name: 'Straylight',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',

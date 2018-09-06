@@ -5,8 +5,9 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-import ProtocolPost from '../../components/ProtocolPost'
+import ProtocolCard from '../../components/ProtocolCard'
 import ProtocolMenu from '../../components/ProtocolMenu'
+import Session from '../../services/session'
 
 class ProtocolEntry extends React.Component {
   getAuthor(id, authors) {
@@ -16,6 +17,8 @@ class ProtocolEntry extends React.Component {
   }
 
   render() {
+    if (!Session.state || !Session.state.isInitialized) return null
+
     const site = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.postResource.posts')
     const featuredPosts = get(this, 'props.data.featuredPostResource.posts')
@@ -28,7 +31,7 @@ class ProtocolEntry extends React.Component {
       featuredPosts.map((data, i) => {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i}>
-            <ProtocolPost
+            <ProtocolCard
               data={data.post}
               site={site}
               author={this.getAuthor(data.post.author, authors)}
@@ -44,12 +47,12 @@ class ProtocolEntry extends React.Component {
       posts.map((data, i) => {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i + 1}>
-            <ProtocolPost
+            <ProtocolCard
               data={data.post}
               site={site}
               author={this.getAuthor(data.post.author, authors)}
               isIndex={true}
-              key={i}
+              key={i + 1}
             />
           </LazyLoad>
         )
@@ -75,7 +78,10 @@ class ProtocolEntry extends React.Component {
         />
         <section>
           <ProtocolMenu tags={tags} {...this.props} />
-          {pageLinks}
+
+          <div className="container p-0">
+            <div className="card-columns">{pageLinks}</div>
+          </div>
         </section>
       </div>
     )

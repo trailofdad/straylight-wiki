@@ -5,6 +5,8 @@ import axios from 'axios'
 import AuthApi from '../../services/auth'
 import PilotMenu from '../PilotMenu'
 
+import get from 'lodash/get'
+
 import './style.scss'
 
 const deauth = () => {
@@ -20,13 +22,14 @@ class SiteNavi extends React.Component {
 
   render() {
     const { location, title, session } = this.props
-    let protocolLink, applyLink, pilotName
+    let protocolLink, applyLink, pilotName, pilotId
 
     let isAuthorized = session && session.isStraylight
 
     // TODO: abstract to components
     if (isAuthorized) {
-      pilotName = session.name
+      pilotName = get(session, 'name')
+      pilotId = get(session, 'character_id')
 
       protocolLink = (
         <li
@@ -109,6 +112,7 @@ class SiteNavi extends React.Component {
             <PilotMenu
               isAuthorized={isAuthorized}
               pilotName={pilotName}
+              pilotId={pilotId}
               logout={this.logout}
             />
           </div>

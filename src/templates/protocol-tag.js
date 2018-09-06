@@ -5,7 +5,7 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-import ProtocolPost from '../components/ProtocolPost'
+import ProtocolCard from '../components/ProtocolCard'
 import ProtocolMenu from '../components/ProtocolMenu'
 
 class ProtocolTagTemplate extends React.Component {
@@ -38,7 +38,14 @@ class ProtocolTagTemplate extends React.Component {
       posts.map((data, i) => {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i}>
-            <ProtocolPost
+            {/* <ProtocolPost
+              data={data.post}
+              site={site}
+              author={this.getAuthor(data.post.author, authors)}
+              isIndex={true}
+              key={i}
+            /> */}
+            <ProtocolCard
               data={data.post}
               site={site}
               author={this.getAuthor(data.post.author, authors)}
@@ -71,7 +78,10 @@ class ProtocolTagTemplate extends React.Component {
         />
         <section>
           <ProtocolMenu tags={tags} slug={slug} {...this.props} />
-          {pageLinks}
+
+          <div className="container p-0">
+            <div className="card-columns">{pageLinks}</div>
+          </div>
         </section>
       </div>
     )

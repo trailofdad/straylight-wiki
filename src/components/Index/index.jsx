@@ -62,31 +62,31 @@ class Index extends React.Component {
 
         <section>
           <div className="container p-0">
-            <div class="card-deck">
-              <div class="card bg-dark text-white">
+            <div className="card-deck">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2018.09.01.02.45.16.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Small, but mighty</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Small, but mighty</h5>
+                  <p className="card-text">
                     Straylight pilots rely on experience and strategy to
                     outsmart, outclass and outplay the enemy.
                   </p>
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2017.05.27.23.38.54.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Learn from the best</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Learn from the best</h5>
+                  <p className="card-text">
                     Our fleet commanders have thousands of hours of flying
                     experience, and they're willing to pass that knowledge on to
                     you.
@@ -94,15 +94,15 @@ class Index extends React.Component {
                 </div>
               </div>
 
-              <div class="card bg-dark text-white">
+              <div className="card bg-dark text-white">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src="https://api.straylight.systems/content/images/2018/09/2017.02.28.02.10.30.png"
                   alt="Card image cap"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">Friends for life</h5>
-                  <p class="card-text">
+                <div className="card-body">
+                  <h5 className="card-title">Friends for life</h5>
+                  <p className="card-text">
                     Find yourself surrounded by new friends willing to support
                     you through New Eden - and life's - greatest trials.
                   </p>
