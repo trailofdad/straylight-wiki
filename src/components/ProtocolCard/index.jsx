@@ -29,7 +29,7 @@ class ProtocolCard extends React.Component {
     const path = `/protocol/${slug}`
 
     return (
-      <Link style={{ boxShadow: 'none' }} to={path}>
+      <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
         <div className="card bg-dark text-white">
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
