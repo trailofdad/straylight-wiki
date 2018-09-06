@@ -105,3 +105,9 @@ export const PageContent = styled('div')`
 `
 
 export const Articles = styled('div')``
+
+export const Title = styled('div')``
+
+export const linkStyle = css`
+  box-shadow: none;
+`

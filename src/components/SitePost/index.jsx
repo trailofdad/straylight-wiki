@@ -4,7 +4,14 @@ import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
-import { Articles, ArticlesWrap, PageHeader, PageContent } from './style'
+import {
+  Articles,
+  ArticlesWrap,
+  PageHeader,
+  PageContent,
+  Title,
+  linkStyle,
+} from './style'
 
 class SitePost extends React.Component {
   more(path) {
@@ -64,8 +71,8 @@ class SitePost extends React.Component {
         <Articles>
           <ArticlesWrap key={path}>
             <PageHeader>
-              <Link style={{ boxShadow: 'none' }} to={path}>
-                <h1>{title}</h1>
+              <Link className={linkStyle} to={path}>
+                <Title>{title}</Title>
                 <time dateTime={date}>{date}</time>
               </Link>
               {this.categories(cate)}
