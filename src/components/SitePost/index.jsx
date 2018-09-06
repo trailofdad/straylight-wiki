@@ -61,7 +61,7 @@ class SitePost extends React.Component {
 
     return (
       <div className="container p-0">
-        <Articles className="articles">
+        <Articles>
           <ArticlesWrap key={path}>
             <PageHeader>
               <Link style={{ boxShadow: 'none' }} to={path}>
