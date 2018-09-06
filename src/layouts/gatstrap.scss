@@ -101,6 +101,9 @@ ul {
     }
   }
 }
+a {
+  outline: 0;
+}
 .with-background {
   background: $gray-900 url(/img/cover.jpg) center center/cover no-repeat fixed;
   height: 100%;
@@ -128,5 +131,15 @@ ul {
 
   .card-text {
     color: $gray-500;
+  }
+
+  .author-image {
+    max-width: 32px;
+    border-radius: 5rem;
+  }
+
+  .card-footer {
+    background: $background-alt;
+    text-transform: uppercase;
   }
 }

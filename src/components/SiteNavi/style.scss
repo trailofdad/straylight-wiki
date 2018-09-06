@@ -9,6 +9,32 @@
     font-weight: 300;
   }
 
+  .dropdown-menu.bg-dark {
+    border-bottom: 1px $gray-800 solid;
+    border-top: 0;
+    padding-top: 6px;
+    padding-bottom: 0;
+
+    a.dropdown-item {
+      color: $gray-600;
+      border-left: 1px $gray-800 solid;
+      border-right: 1px $gray-800 solid;
+
+      &:last-child {
+        padding-bottom: 10px;
+      }
+
+      &:hover {
+        background: $gray-900;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      &:active {
+        color: white;
+      }
+    }
+  }
+
   @media screen and (max-width: 1023px) {
     .navbar-brand {
       letter-spacing: 2px;

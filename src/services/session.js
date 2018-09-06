@@ -22,7 +22,11 @@ const Session = {
       authResponse.data &&
       authResponse.data.isStraylight
     ) {
-      this.state = authResponse.data
+      // Not a React component, can't use setState()
+      this.state = {
+        ...authResponse.data,
+        isInitialized: true,
+      }
     } else {
       this.protectRoutes()
     }
