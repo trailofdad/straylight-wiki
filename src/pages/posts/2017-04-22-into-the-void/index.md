@@ -1,12 +1,10 @@
 ---
-title: Into the Void
+title: Into the Void of Stain
 date: "2017-04-22T23:46:37.121Z"
 layout: post
 path: "/into-the-void/"
 categories:
-  - Announcement
   - Corp History
-  - Recruitment
 description: New fronts, new pilots and new action. It’s been our most pivotal and exciting month yet.
 ---
 

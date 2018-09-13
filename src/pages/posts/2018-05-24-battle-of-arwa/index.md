@@ -1,20 +1,16 @@
 ---
-title: Fire rains down over Arwa VIII
+title: The Battle of Arwa
 date: "2018-05-24T09:46:37.121Z"
 layout: post
 path: "/the-battle-of-arwa/"
 categories:
-  - Announcement
-  - Corp History
   - Battle Report
 description: This is a first-person account of a fleet engagement that appears in our latest video, [Who Dares Wins.](https://www.youtube.com/watch?v=diFsV8f-FXY).
 ---
 
 ![](https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg)
 
-_This is a first-person account of a fleet engagement that appears in our latest video, [Who Dares Wins.](https://www.youtube.com/watch?v=diFsV8f-FXY)_
-
-Player-built structures, despite their sometimes insignificant tactical value, often make for excellent opportunities of escalation in Metropolis. SAS was not involved in the initial siege of these structures, nor did we own them - but we seized the chance to engage from the perspective of a third party contributing to chaos.
+Citadels often make for excellent opportunities of escalation. We were not involved in the siege of these structures, nor did we own them - but we seized the chance to engage as a third party.
 
 <!--more-->
 
@@ -35,10 +31,13 @@ Thaddeus Drake made a critical call at this point for our capitals to disengage,
 ## Aftermath
 Nearly 33 billion ISK worth of VWUT/HEL/IED ships were destroyed in Arwa, while Panic Attack suffered losses totalling almost 24 billion ISK. SAS lost only one dreadnaught - mine - totalling 2.8 billion.
 
-I also noticed that the local chat channel was unusually quiet and free from the typical banter throughout the engagement. That's the mark of a thrilling fight.
+Local chat channels were unusually quiet and free from the typical banter throughout the engagement. That's the mark of a thrilling fight.
 
-Chad VanGaalen  
+Chad VanGaalen<br>
 <small class="text-primary">Straylight Command</small>
+
+## Watch
+* [Video uplink](https://www.youtube.com/watch?v=diFsV8f-FXY)
 
 ## Battle Analysis
 * [Phase I - Otou](https://br.inyour.space/?s=2723&b=8086210&e=775&t=yvvLz)

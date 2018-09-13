@@ -4,16 +4,17 @@ date: "2017-02-27T23:46:37.121Z"
 layout: post
 path: "/the-fight-for-freeside/"
 categories:
-  - After Action Report
-  - Corp History
+  - Battle Report
 description: Last night, in a turn of circumstance that would have been impossible to predict, pilots of the Straylight endured and successfully warded off a third attack on Freeside, destroying an enemy dreadnaught while suffering no losses.
 ---
 
-![](../img/Moros.jpg)
+![](../img/2017.02.16.02.09.43.jpg)
 
-Last night, in a turn of circumstance that would have been impossible to predict, pilots of the Straylight endured and successfully warded off a third attack on Freeside, destroying an enemy dreadnaught while suffering no losses.
+Last night, in a turn of circumstance that would have been impossible to predict, pilots of the Straylight endured and successfully warded off a third attack on Freeside.
 
 <!--more-->
+
+Our pilots destroyed an enemy dreadnaught - the corp's first capital kill - while suffering no losses.
 
 It was an undertaking that could only be described as a perfectly timed alignment of the stars, fusing the diplomatic efforts of Vice Admiral Damian Lansing with the strategic direction of Straylight Command.
 
