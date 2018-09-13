@@ -5,7 +5,7 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-import SitePost from '../../components/SitePost'
+import SiteCard from '../../components/SiteCard'
 
 class Blog extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class Blog extends React.Component {
       if (layout === 'post' && path !== '/404/') {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i}>
-            <SitePost data={data.post} site={site} isIndex={true} key={i} />
+            <SiteCard data={data.post} site={site} isIndex={true} key={i} />
           </LazyLoad>
         )
       }
@@ -47,7 +47,9 @@ class Blog extends React.Component {
           ]}
         />
         <section>
-          {pageLinks}
+          <div className="container p-0">
+            <div className="card-columns">{pageLinks}</div>
+          </div>
         </section>
       </div>
     )
