@@ -7,7 +7,7 @@ import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
 import './style.scss'
 
-class SiteCard extends React.Component {
+class SiteSlide extends React.Component {
   description(body) {
     let test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
     if (test.match('<!--more-->')) {
@@ -49,32 +49,22 @@ class SiteCard extends React.Component {
     )
 
     return (
-      <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
-        <div className="card bg-dark text-white">
-          <div className="card-body">
-            <h5 className="card-title">{title}</h5>
+      <div className="carousel-item">
+        <div className="container p-0 my-3 my-lg-5">
+          <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
+            <h1>{title}</h1>
             <p
-              className="card-text"
+              className="lead"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            <div className="d-flex justify-content-between">
-              <button className="btn btn-sm btn-outline-primary">
-                Read more
-              </button>
-            </div>
-          </div>
-
-          <div className="card-footer text-muted">
-            <div className="d-flex flex-row justify-content-between">
-              {this.categories(cate)}
-
-              <small>{date}</small>
-            </div>
-          </div>
+            {/* <p className="date">
+              {date}
+            </p> */}
+          </Link>
         </div>
-      </Link>
+      </div>
     )
   }
 }
 
-export default SiteCard
+export default SiteSlide

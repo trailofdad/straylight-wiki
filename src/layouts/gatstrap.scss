@@ -106,7 +106,7 @@ a {
 }
 .with-background {
   background: $gray-900 url(/img/cover.jpg) center center/cover no-repeat fixed;
-  height: 100%;
+  min-height: 100%;
 }
 .text-muted {
   color: $champagne-muted !important;
@@ -146,5 +146,16 @@ figure {
   .card-footer {
     background: $background-alt;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 575px) {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    margin-top: -1rem;
+    margin-bottom: -3rem;
+
+    &:hover {
+      transform: unset;
+    }
   }
 }
