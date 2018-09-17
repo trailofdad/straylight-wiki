@@ -9,6 +9,7 @@ import Index from '../components/Index/index'
 class SiteIndex extends React.Component {
   render() {
     const site = get(this, 'props.data.site.siteMetadata')
+    const { data } = this.props
 
     return (
       <div>
@@ -27,7 +28,7 @@ class SiteIndex extends React.Component {
             },
           ]}
         />
-        <Index />
+        <Index posts={data.remark.posts} />
       </div>
     )
   }
@@ -48,7 +49,10 @@ export const pageQuery = graphql`
         adsense
       }
     }
-    remark: allMarkdownRemark {
+    remark: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 2
+    ) {
       posts: edges {
         post: node {
           html

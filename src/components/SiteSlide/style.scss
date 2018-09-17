@@ -1,0 +1,117 @@
+@import '../../layouts/colors.scss';
+
+.carousel {
+  position: relative;
+
+  @media screen and (max-width: 575px) {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    margin-top: -1rem;
+    margin-bottom: -4rem;
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      padding-top: 22.5rem;
+    }
+  }
+}
+
+.carousel-item {
+  height: 400px;
+
+  &:not(:first-child) {
+    .container {
+      position: relative;
+      height: 400px;
+    }
+
+    .container:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9),
+        transparent,
+        transparent
+      );
+      height: 400px;
+      z-index: 1;
+      content: '';
+    }
+  }
+
+  h1 {
+    letter-spacing: 4px;
+  }
+
+  h1.tagline {
+    padding-top: 6rem;
+  }
+
+  img {
+    min-width: 710px;
+    min-height: 400px;
+  }
+
+  h1:not(.tagline) {
+    position: absolute;
+    bottom: 6.5rem;
+    margin-left: 2rem;
+    opacity: 0;
+    transition: opacity 375ms ease-in;
+    z-index: 2;
+    max-width: 85vw;
+
+    @media screen and (max-width: 575px) {
+      margin-left: 1rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      bottom: unset;
+      top: 2rem;
+    }
+  }
+
+  &.active {
+    h1,
+    p.lead > p:last-child,
+    p.date {
+      opacity: 1;
+    }
+  }
+
+  p.lead {
+    color: white;
+
+    > p:last-child {
+      transition: opacity 375ms ease-in;
+      transition-delay: 300ms;
+      opacity: 0;
+      position: absolute;
+      margin-left: 2rem;
+      bottom: 2rem;
+      width: 500px;
+      max-width: 70vw;
+      z-index: 2;
+
+      @media screen and (max-width: 575px) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  p.date {
+    transition: opacity 200ms linear;
+    transition-delay: 200ms;
+    opacity: 0;
+    color: white;
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 5.35rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    z-index: 2;
+  }
+}
