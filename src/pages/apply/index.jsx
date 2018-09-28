@@ -50,30 +50,14 @@ class Apply extends React.Component {
                 <div className="card-body">
                   <h5 className="card-title">Get in touch</h5>
                   <p className="card-text">
-                    Join our channel now to speak with Straylight Command.
+                    Join our open channel now to speak with Straylight Command.
                   </p>
                   <a
                     className="btn btn-outline-primary"
-                    href="http://slack.straylight.systems/"
+                    href="https://discord.gg/35RcgXA"
                     target="_blank"
                   >
-                    Join Slack channel
-                  </a>
-                </div>
-              </div>
-
-              <div className="card bg-dark text-white">
-                <div className="card-body">
-                  <h5 className="card-title">Register for screening</h5>
-                  <p className="card-text">
-                    All you have to do is sign in to our secure, automated tool.
-                  </p>
-                  <a
-                    className="btn btn-outline-primary"
-                    href="https://mgmt.straylight.systems/"
-                    target="_blank"
-                  >
-                    Register on SEAT
+                    Join on Discord
                   </a>
                 </div>
               </div>
@@ -82,15 +66,25 @@ class Apply extends React.Component {
                 <div className="card-body">
                   <h5 className="card-title">Tell us about you</h5>
                   <p className="card-text">
-                    The last step is to have a quick chat to see if you're a
-                    fit. You'll need TeamSpeak.
+                    We'll make time for a brief chat to get to know each other,
+                    and help you determine if you're a fit for Straylight.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card bg-dark text-white">
+                <div className="card-body">
+                  <h5 className="card-title">Register for services</h5>
+                  <p className="card-text">
+                    Sign in with your main to our secure, automated tool for
+                    services access.
                   </p>
                   <a
                     className="btn btn-outline-primary"
-                    href="ts3server://voice.straylight.systems/"
+                    href="https://mgmt.straylight.systems/"
                     target="_blank"
                   >
-                    Connect to TS3
+                    Register on SEAT
                   </a>
                 </div>
               </div>
@@ -115,8 +109,7 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2018.04.24.21.16.08.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2018.04.24.21.16.08.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Constant fleet action</h5>
@@ -131,8 +124,7 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.06.25.02.15.54.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2017.06.25.02.15.54.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Supercapital hunting</h5>
@@ -146,8 +138,7 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2018.06.17.02.40.47.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2018.06.17.02.40.47.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">R64 moon mining operations</h5>
@@ -161,8 +152,7 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.12.02.20.09.55.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2017.12.02.20.09.55.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Free asset relocation</h5>
@@ -177,8 +167,7 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.05.13.20.29.36.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2017.05.13.20.29.36.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Black Ops Training</h5>
@@ -192,13 +181,12 @@ class Apply extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/Eve-Online-05.10.2017---01.50.51.16.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/Eve-Online-05.10.2017---01.50.51.16.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Resupply from The Forge</h5>
                   <p className="card-text">
-                    Our jump freight team is constantly running the gauntlet to
+                    Our logistics team is constantly running the gauntlet to
                     Jita and back to make sure you have what you need.
                   </p>
                 </div>
