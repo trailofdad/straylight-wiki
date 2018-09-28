@@ -47,7 +47,7 @@ module.exports = {
         short_name: 'Straylight',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#673ab7',
+        theme_color: '#c5ae87',
         display: 'standalone',
         icons: [
           {
