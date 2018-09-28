@@ -131,8 +131,7 @@ class Index extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2018.09.01.02.45.16.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2018.09.01.02.45.16.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Small, but mighty</h5>
@@ -146,8 +145,7 @@ class Index extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.05.27.23.38.54.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2017.05.27.23.38.54.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Learn from the best</h5>
@@ -162,8 +160,7 @@ class Index extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.02.28.02.10.30.png"
-                  alt="Card image cap"
+                  src="https://api.straylight.systems/content/images/2018/09/2017.02.28.02.10.30.jpg"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Friends for life</h5>
