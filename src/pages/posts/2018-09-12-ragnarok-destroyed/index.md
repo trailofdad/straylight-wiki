@@ -20,5 +20,8 @@ Three dozen pilots from Who Dares Wins, Purple Helmeted Warriors, and associated
 
 This marks the Straylight's first official titan kill since its inception, and a defining moment at that. Its pilots have engaged and destroyed 9 other supercapitals this year.
 
+## Watch
+* [Video uplink](https://www.youtube.com/watch?v=JmXC1jmbLWc)
+
 ## Battle Analysis
 * [Providence Report](https://br.inyour.space/?s=3710&b=8256300&e=90&t=vfvvf)
