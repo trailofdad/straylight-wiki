@@ -199,15 +199,39 @@ class Apply extends React.Component {
           <div className="container p-0">
             <h1 className="text-center">Not convinced?</h1>
             <p className="lead text-center text-primary pb-4">
-              Watch a video or two.
+              Watch a video. Or three.
             </p>
+
+            <div className="card-deck mb-md-4">
+              <div className="card bg-dark text-white">
+                <img
+                  className="card-img-top"
+                  src="https://img.youtube.com/vi/JmXC1jmbLWc/maxresdefault.jpg"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Who Dares Wins: Derelik</h5>
+                  <p className="card-text">
+                    In YC120, Who Dares Wins deployed to the Derelik region to
+                    join forces with REKKINGCREW. The following few months saw
+                    our pilots vaporize nearly five trillion ISK worth of
+                    property. This is a window in to what that looked like.
+                  </p>
+                  <a
+                    className="btn btn-outline-primary"
+                    href="https://www.youtube.com/watch?v=JmXC1jmbLWc"
+                    target="_blank"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <div className="card-deck">
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
                   src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
-                  alt="Card image cap"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Straylight Systems Trailer</h5>
@@ -220,7 +244,7 @@ class Apply extends React.Component {
                     href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
                     target="_blank"
                   >
-                    Watch video
+                    Watch now
                   </a>
                 </div>
               </div>
@@ -229,7 +253,6 @@ class Apply extends React.Component {
                 <img
                   className="card-img-top"
                   src="https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg"
-                  alt="Card image cap"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Who Dares Wins Trailer</h5>
@@ -243,7 +266,7 @@ class Apply extends React.Component {
                     href="https://www.youtube.com/watch?v=diFsV8f-FXY"
                     target="_blank"
                   >
-                    Watch video
+                    Watch now
                   </a>
                 </div>
               </div>
