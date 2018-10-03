@@ -15,11 +15,12 @@ class ProtocolPostTemplate extends React.Component {
 
   render() {
     const post = get(this, 'props.data.postResource.posts[0].post')
+    const tags = get(this, 'props.data.tagResource.tags')
+    const authors = get(this, 'props.data.authorResource.authors')
+
     const site = get(this, 'props.data.site')
     const title = get(post, 'title')
     const siteTitle = get(site, 'meta.title')
-    const tags = get(this, 'props.data.tagResource.tags')
-    const authors = get(this, 'props.data.authorResource.authors')
 
     let template = (
       <ProtocolPost
@@ -48,6 +49,10 @@ class ProtocolPostTemplate extends React.Component {
             {
               property: 'og:url',
               content: get(site, 'meta.url') + get(post, 'slug'),
+            },
+            {
+              property: 'og:image',
+              content: get(post, 'html').slice(48, 125),
             },
           ]}
         />
