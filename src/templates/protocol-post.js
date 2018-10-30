@@ -13,6 +13,12 @@ class ProtocolPostTemplate extends React.Component {
     if (author) return author.author
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      $('.article-wrap').css({ opacity: 1 })
+    }, 250)
+  }
+
   render() {
     const post = get(this, 'props.data.postResource.posts[0].post')
     const tags = get(this, 'props.data.tagResource.tags')
@@ -56,7 +62,7 @@ class ProtocolPostTemplate extends React.Component {
             },
           ]}
         />
-        <section>
+        <section className="pt-4">
           <ProtocolMenu
             tags={tags}
             {...this.props}

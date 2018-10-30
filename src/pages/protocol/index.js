@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link, { navigateTo } from 'gatsby-link'
 import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
@@ -10,6 +10,16 @@ import ProtocolMenu from '../../components/ProtocolMenu'
 import Session from '../../services/session'
 
 class ProtocolEntry extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      $('.card.card-protocol').each((index, element) => {
+        let delay = index * 75
+
+        setTimeout(() => $(element).css({ opacity: 1 }), 0 + delay)
+      })
+    }, 500)
+  }
+
   getAuthor(id, authors) {
     let author = authors.find(({ author }) => author.ghostId === id)
 
@@ -17,7 +27,10 @@ class ProtocolEntry extends React.Component {
   }
 
   render() {
-    if (!Session.state || !Session.state.isInitialized) return null
+    // if (!Session.state || !Session.state.isInitialized) {
+    //   navigateTo('/')
+    //   return null
+    // }
 
     const site = get(this, 'props.data.site.siteMetadata')
     const posts = get(this, 'props.data.postResource.posts')
@@ -76,7 +89,7 @@ class ProtocolEntry extends React.Component {
             },
           ]}
         />
-        <section>
+        <section className="pt-4">
           <ProtocolMenu tags={tags} {...this.props} />
 
           <div className="container p-0">

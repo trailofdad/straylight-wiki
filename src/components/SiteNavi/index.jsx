@@ -60,14 +60,18 @@ class SiteNavi extends React.Component {
 
     return (
       <nav className="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bg-primary">
+        <Link
+          className="text-center d-block d-md-none d-lg-none d-xl-none"
+          to="/"
+        >
+          <h1 className="navbar-brand text-primary mb-0">STRAYLIGHT</h1>
+        </Link>
         <div className="container">
-          <Link className="text-center" to="/">
-            <h1 className="navbar-brand text-primary mb-0 d-none d-md-block d-lg-block d-xl-block">
-              {title}
-            </h1>
-            <h1 className="navbar-brand text-primary mb-0 d-block d-md-none d-lg-none d-xl-none">
-              SS
-            </h1>
+          <Link
+            className="text-center d-none d-md-block d-lg-block d-xl-block"
+            to="/"
+          >
+            <h1 className="navbar-brand text-primary mb-0">{title}</h1>
           </Link>
           <div className="navbar-nav-scroll">
             <ul className="navbar-nav bd-navbar-nav flex-row mr-auto">

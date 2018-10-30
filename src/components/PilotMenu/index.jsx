@@ -24,13 +24,16 @@ class PilotMenu extends React.Component {
       <li className="nav-item dropdown">
         <a
           className="nav-link dropdown-toggle"
-          href="http://example.com"
+          href="#"
           id="dropdown01"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
         >
-          {pilotName}
+          <span className="d-none d-md-inline d-lg-inline d-xl-inline">
+            {pilotName}
+          </span>
+          <span className="d-inline d-md-none d-lg-none d-xl-none">Me</span>
         </a>
         <div className="dropdown-menu bg-dark" aria-labelledby="dropdown01">
           <a
@@ -38,22 +41,31 @@ class PilotMenu extends React.Component {
             href={`https://zkillboard.com/character/${pilotId}/`}
             target="_blank"
           >
-            My kills
+            My Dashboard
           </a>
+          <div className="dropdown-divider" />
           <a
             className="dropdown-item"
             href="https://mgmt.straylight.systems"
             target="_blank"
           >
-            Launch SEAT
+            Corp Services
           </a>
           <a
             className="dropdown-item"
-            href="ts3server://voice.straylight.systems"
+            href="https://auth.whodareswins.space"
             target="_blank"
           >
-            Launch TS3
+            Alliance Services
           </a>
+          <a
+            className="dropdown-item"
+            href="ts3server://voice.whodareswins.space"
+            target="_blank"
+          >
+            Alliance Comms
+          </a>
+          <div className="dropdown-divider" />
           <a className="dropdown-item" href="#" onClick={logout}>
             Logout
           </a>

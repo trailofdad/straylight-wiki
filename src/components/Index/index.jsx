@@ -78,7 +78,7 @@ class Index extends React.Component {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <div className="container p-0 my-3 my-lg-5 text-center">
-                  <h1 class="tagline">A squadron worth fighting for</h1>
+                  <h1 className="tagline">A squadron worth fighting for</h1>
                   <p className="lead text-primary">
                     Often outmanned, never outgunned.
                   </p>
@@ -89,14 +89,14 @@ class Index extends React.Component {
                       className="btn btn-outline-primary"
                       target="_blank"
                     >
-                      Watch
+                      Watch a video
                     </a>
                     <a
                       href="/apply"
                       className="btn btn-outline-light ml-1 ml-md-3"
                       target="_self"
                     >
-                      Apply
+                      Learn about Straylight
                     </a>
                   </div>
                 </div>

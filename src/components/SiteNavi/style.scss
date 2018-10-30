@@ -12,13 +12,15 @@
   .dropdown-menu.bg-dark {
     border-bottom: 1px $gray-800 solid;
     border-top: 0;
-    padding-top: 6px;
+    margin-top: 8px;
     padding-bottom: 0;
+    left: unset;
+    right: -20px;
+    border-left: 1px $gray-800 solid;
+    border-right: 1px $gray-800 solid;
 
     a.dropdown-item {
       color: $gray-600;
-      border-left: 1px $gray-800 solid;
-      border-right: 1px $gray-800 solid;
 
       &:last-child {
         padding-bottom: 10px;
@@ -32,6 +34,12 @@
       &:active {
         color: white;
       }
+    }
+
+    .dropdown-divider {
+      border-left: 1px $gray-800 solid !important;
+      border-right: 1px $gray-800 solid !important;
+      border-top-color: $gray-800;
     }
   }
 

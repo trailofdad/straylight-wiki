@@ -9,6 +9,16 @@ import ProtocolCard from '../components/ProtocolCard'
 import ProtocolMenu from '../components/ProtocolMenu'
 
 class ProtocolTagTemplate extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      $('.card.card-protocol').each((index, element) => {
+        let delay = index * 75
+
+        setTimeout(() => $(element).css({ opacity: 1 }), 0 + delay)
+      })
+    }, 500)
+  }
+
   getAuthor(id, authors) {
     let author = authors.find(({ author }) => author.ghostId === id)
 
@@ -76,7 +86,7 @@ class ProtocolTagTemplate extends React.Component {
             },
           ]}
         />
-        <section>
+        <section className="pt-4">
           <ProtocolMenu tags={tags} slug={slug} {...this.props} />
 
           <div className="container p-0">

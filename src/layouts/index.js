@@ -13,7 +13,7 @@ import SiteNavi from '../components/SiteNavi'
 import Session from '../services/session'
 
 class Template extends React.Component {
-  async componentDidMount() {
+  async componentWillMount() {
     emergence.init()
 
     await Session.initialize()
