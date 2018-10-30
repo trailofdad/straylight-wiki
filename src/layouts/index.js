@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import { siteMetadata } from '../../gatsby-config'
 import emergence from 'emergence.js'
 
@@ -13,8 +12,8 @@ import SiteNavi from '../components/SiteNavi'
 import Session from '../services/session'
 
 class Template extends React.Component {
-  async componentDidMount() {
-    emergence.init()
+  async componentWillMount() {
+    // emergence.init()
 
     await Session.initialize()
 
@@ -22,7 +21,7 @@ class Template extends React.Component {
   }
 
   componentDidUpdate() {
-    emergence.init()
+    // emergence.init()
   }
 
   render() {
