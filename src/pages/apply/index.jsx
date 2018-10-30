@@ -50,14 +50,15 @@ class Apply extends React.Component {
                 <div className="card-body">
                   <h5 className="card-title">Get in touch</h5>
                   <p className="card-text">
-                    Join our open channel now to speak with Straylight Command.
+                    Join our open channel on Discord to speak with Straylight
+                    Command.
                   </p>
                   <a
                     className="btn btn-outline-primary"
                     href="https://discord.gg/35RcgXA"
                     target="_blank"
                   >
-                    Join on Discord
+                    Join now
                   </a>
                 </div>
               </div>
@@ -84,7 +85,7 @@ class Apply extends React.Component {
                     href="https://mgmt.straylight.systems/"
                     target="_blank"
                   >
-                    Register on SEAT
+                    Register now
                   </a>
                 </div>
               </div>

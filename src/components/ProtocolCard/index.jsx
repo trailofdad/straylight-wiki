@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 
 import get from 'lodash/get'
 
+import './style.scss'
+
 class ProtocolCard extends React.Component {
   description(body) {
     let test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
@@ -30,7 +32,7 @@ class ProtocolCard extends React.Component {
 
     return (
       <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
-        <div className="card bg-dark text-white">
+        <div className="card card-protocol bg-dark text-white">
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <p

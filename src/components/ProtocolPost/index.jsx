@@ -1,10 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link, { navigateTo } from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'
 import Adsense from '../Adsense'
 import ReadNext from '../ReadNext'
+
+import './style.scss'
 
 class ProtocolPost extends React.Component {
   more(path) {
@@ -68,7 +70,7 @@ class ProtocolPost extends React.Component {
     return (
       <div className="container p-0">
         <div className="articles">
-          <div className="article-wrap" key={path}>
+          <div className="article-wrap article-wrap-protocol" key={path}>
             <div className="page-header">
               <Link style={{ boxShadow: 'none' }} to={path}>
                 <h1>{title}</h1>
