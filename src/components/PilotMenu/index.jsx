@@ -4,7 +4,7 @@ import './style.scss'
 
 class PilotMenu extends React.Component {
   render() {
-    const { isAuthorized, pilotName, pilotId, logout } = this.props
+    const { isAuthorized, pilotName, logout } = this.props
 
     if (!isAuthorized) {
       return (
@@ -36,11 +36,7 @@ class PilotMenu extends React.Component {
           <span className="d-inline d-md-none d-lg-none d-xl-none">Me</span>
         </a>
         <div className="dropdown-menu bg-dark" aria-labelledby="dropdown01">
-          <a
-            className="dropdown-item"
-            href={`https://zkillboard.com/character/${pilotId}/`}
-            target="_blank"
-          >
+          <a className="dropdown-item" href="/dashboard">
             My Dashboard
           </a>
           <div className="dropdown-divider" />

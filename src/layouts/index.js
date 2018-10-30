@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import { siteMetadata } from '../../gatsby-config'
 import emergence from 'emergence.js'
 

@@ -148,6 +148,12 @@ figure {
     text-transform: uppercase;
   }
 
+  &.card-statistic {
+    .card-title {
+      font-size: 2.5rem;
+    }
+  }
+
   @media screen and (max-width: 575px) {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
