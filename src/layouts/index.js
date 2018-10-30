@@ -13,7 +13,7 @@ import Session from '../services/session'
 
 class Template extends React.Component {
   async componentWillMount() {
-    emergence.init()
+    // emergence.init()
 
     await Session.initialize()
 
@@ -21,7 +21,7 @@ class Template extends React.Component {
   }
 
   componentDidUpdate() {
-    emergence.init()
+    // emergence.init()
   }
 
   render() {
