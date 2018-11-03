@@ -35,36 +35,38 @@ class Dashboard extends React.Component {
       )
     } else if (this.state && this.state.session) {
       let months = Object.values(this.state.statistics.months)
-      let thisMonth = months[months.length - 1]
+      let {
+        iskDestroyed = 0,
+        iskLost = 0,
+        shipsDestroyed = 0,
+        shipsLost = 0,
+      } = months[months.length - 1]
 
       let corpMonths = Object.values(this.state.corporation.months)
-      let corpMonth = corpMonths[corpMonths.length - 1]
+      let {
+        iskDestroyed: corpIskDestroyed = 0,
+        iskLost: corpIskLost = 0,
+      } = corpMonths[corpMonths.length - 1]
 
       let statCards = []
       let stats = [
         {
           key: 'ISK destroyed',
-          value: `${(thisMonth.iskDestroyed / 1000000000).toFixed(2)}B`,
+          value: `${(iskDestroyed / 1000000000).toFixed(2)}B`,
         },
         {
           key: 'ISK lost',
-          value: `${(thisMonth.iskLost / 1000000000).toFixed(2)}B`,
+          value: `${(iskLost / 1000000000).toFixed(2)}B`,
         },
-        { key: 'ships destroyed', value: thisMonth.shipsDestroyed },
-        { key: 'ships lost', value: thisMonth.shipsLost },
+        { key: 'ships destroyed', value: shipsDestroyed },
+        { key: 'ships lost', value: shipsLost },
         {
           key: 'your efficiency',
-          value: `${(
-            (1 - thisMonth.iskLost / thisMonth.iskDestroyed) *
-            100
-          ).toFixed(1)}%`,
+          value: `${((1 - iskLost / iskDestroyed) * 100).toFixed(1)}%`,
         },
         {
           key: 'corp efficiency',
-          value: `${(
-            (1 - corpMonth.iskLost / corpMonth.iskDestroyed) *
-            100
-          ).toFixed(1)}%`,
+          value: `${((1 - corpIskLost / corpIskDestroyed) * 100).toFixed(1)}%`,
         },
       ]
 

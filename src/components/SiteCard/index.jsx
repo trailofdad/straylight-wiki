@@ -50,7 +50,7 @@ class SiteCard extends React.Component {
 
     return (
       <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
-        <div className="card bg-dark text-white">
+        <div className="card card-site bg-dark text-white">
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <p
