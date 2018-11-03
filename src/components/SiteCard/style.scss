@@ -1,6 +1,12 @@
 @import '../../layouts/colors.scss';
 @import '../../layouts/fonts.scss';
 
+.card.card-site {
+  .card-text > p:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
 .articles {
   .article-wrap {
     padding-bottom: 40px;

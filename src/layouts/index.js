@@ -15,9 +15,13 @@ class Template extends React.Component {
   async componentWillMount() {
     // emergence.init()
 
-    await Session.initialize()
+    try {
+      await Session.initialize()
+    } catch (e) {
+      console.error(e)
+    }
 
-    this.setState(Session.state)
+    if (Session && Session.state) this.setState(Session.state)
   }
 
   componentDidUpdate() {

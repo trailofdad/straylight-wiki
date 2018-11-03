@@ -1,4 +1,8 @@
 .card.card-protocol {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
+
+  figure {
+    margin-bottom: 1rem;
+  }
 }
