@@ -102,7 +102,7 @@ class Dashboard extends React.Component {
               <div className="card-body">
                 <h5 className="card-title">{data.title}</h5>
                 <p className="card-text">
-                  {data.description.substring(0, 128)}
+                  {data.description ? data.description.substring(0, 128) : 'No description provided.' }
                   ...
                 </p>
                 <div className="d-flex justify-content-between">
