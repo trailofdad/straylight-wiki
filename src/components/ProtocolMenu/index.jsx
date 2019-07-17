@@ -1,6 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import './style.scss'
 

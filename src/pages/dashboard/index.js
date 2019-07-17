@@ -3,6 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { siteMetadata } from '../../../gatsby-config'
 import AuthApi from '../../services/auth'
+import Layout from '../../components/Layout'
 
 class Dashboard extends React.Component {
   componentWillMount() {
@@ -102,7 +103,9 @@ class Dashboard extends React.Component {
               <div className="card-body">
                 <h5 className="card-title">{data.title}</h5>
                 <p className="card-text">
-                  {data.description ? data.description.substring(0, 128) : 'No description provided.' }
+                  {data.description
+                    ? data.description.substring(0, 128)
+                    : 'No description provided.'}
                   ...
                 </p>
                 <div className="d-flex justify-content-between">
@@ -117,9 +120,7 @@ class Dashboard extends React.Component {
 
                   <img
                     className="author-image"
-                    src={`https://imageserver.eveonline.com/Character/${
-                      data.fc_character_id
-                    }_128.jpg`}
+                    src={`https://imageserver.eveonline.com/Character/${data.fc_character_id}_128.jpg`}
                   />
                 </div>
               </div>
@@ -273,9 +274,12 @@ class Dashboard extends React.Component {
             },
           ]}
         />
-        <section>
-          <div className="container p-0">{renderedContent}</div>
-        </section>
+
+        <Layout location={this.props.location}>
+          <section>
+            <div className="container p-0">{renderedContent}</div>
+          </section>
+        </Layout>
       </div>
     )
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import axios from 'axios'
 
 import AuthApi from '../../services/auth'
@@ -10,7 +10,9 @@ import get from 'lodash/get'
 import './style.scss'
 
 const deauth = () => {
-  window.location.href = '/'
+  if (window) {
+    window.location.href = '/'
+  }
 }
 
 class SiteNavi extends React.Component {

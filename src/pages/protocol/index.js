@@ -1,13 +1,11 @@
 import React from 'react'
-import Link, { navigateTo } from 'gatsby-link'
 import get from 'lodash/get'
-import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import Layout from '../../components/Layout'
 
 import ProtocolCard from '../../components/ProtocolCard'
 import ProtocolMenu from '../../components/ProtocolMenu'
-import Session from '../../services/session'
 
 class ProtocolEntry extends React.Component {
   componentDidMount() {
@@ -20,12 +18,6 @@ class ProtocolEntry extends React.Component {
     }, 500)
   }
 
-  getAuthor(id, authors) {
-    let author = authors.find(({ author }) => author.ghostId === id)
-
-    if (author) return author.author
-  }
-
   render() {
     // if (!Session.state || !Session.state.isInitialized) {
     //   navigateTo('/')
@@ -36,7 +28,6 @@ class ProtocolEntry extends React.Component {
     const posts = get(this, 'props.data.postResource.posts')
     const featuredPosts = get(this, 'props.data.featuredPostResource.posts')
     const tags = get(this, 'props.data.tagResource.tags')
-    const authors = get(this, 'props.data.authorResource.authors')
 
     const pageLinks = []
 
@@ -47,7 +38,7 @@ class ProtocolEntry extends React.Component {
             <ProtocolCard
               data={data.post}
               site={site}
-              author={this.getAuthor(data.post.author, authors)}
+              author={data.post.primary_author}
               isIndex={true}
               key={i}
             />
@@ -63,7 +54,7 @@ class ProtocolEntry extends React.Component {
             <ProtocolCard
               data={data.post}
               site={site}
-              author={this.getAuthor(data.post.author, authors)}
+              author={data.post.primary_author}
               isIndex={true}
               key={i + 1}
             />
@@ -89,13 +80,16 @@ class ProtocolEntry extends React.Component {
             },
           ]}
         />
-        <section className="pt-4">
-          <ProtocolMenu tags={tags} {...this.props} />
 
-          <div className="container p-0">
-            <div className="card-columns">{pageLinks}</div>
-          </div>
-        </section>
+        <Layout location={this.props.location}>
+          <section className="pt-4">
+            <ProtocolMenu tags={tags} {...this.props} />
+
+            <div className="container p-0">
+              <div className="card-columns">{pageLinks}</div>
+            </div>
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -118,7 +112,7 @@ export const pageQuery = graphql`
     tagResource: allGhostTag {
       tags: edges {
         tag: node {
-          ghostId
+          id
           slug
           name
         }
@@ -135,7 +129,11 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            id
+            name
+            profile_image
+          }
           tags {
             id
             name
@@ -155,22 +153,17 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            id
+            name
+            profile_image
+          }
           featured
           tags {
             id
             name
             slug
           }
-        }
-      }
-    }
-    authorResource: allGhostAuthor {
-      authors: edges {
-        author: node {
-          ghostId
-          name
-          profile_image
         }
       }
     }

@@ -12,7 +12,6 @@ class Index extends React.Component {
   render() {
     const pathPrefix =
       process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-    const title = 'Straylight Systems'
 
     const pageLinks = []
 
@@ -37,14 +36,14 @@ class Index extends React.Component {
     return (
       <div>
         <Helmet
-          title={`${title} | ${get(siteMetadata, 'title')}`}
+          title={`${get(siteMetadata, 'title')}`}
           meta={[
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:site',
               content: `@${get(siteMetadata, 'twitter')}`,
             },
-            { property: 'og:title', content: title },
+            { property: 'og:title', content: 'Straylight Systems' },
             { property: 'og:type', content: 'website' },
             {
               property: 'og:description',
@@ -86,14 +85,14 @@ class Index extends React.Component {
                   <div>
                     <a
                       href="https://www.youtube.com/watch?v=JmXC1jmbLWc"
-                      className="btn btn-outline-primary"
+                      className="btn btn-outline-light"
                       target="_blank"
                     >
                       Watch a video
                     </a>
                     <a
                       href="/apply"
-                      className="btn btn-outline-light ml-1 ml-md-3"
+                      className="btn btn-outline-primary ml-1 ml-md-3"
                       target="_self"
                     >
                       Learn about Straylight

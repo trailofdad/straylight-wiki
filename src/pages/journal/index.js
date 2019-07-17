@@ -1,9 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import Layout from '../../components/Layout'
+import { siteMetadata } from '../../../gatsby-config'
 
 import SiteCard from '../../components/SiteCard'
 
@@ -29,10 +30,12 @@ class Blog extends React.Component {
       }
     })
 
+    const title = 'Journal'
+
     return (
       <div>
         <Helmet
-          title={get(site, 'title')}
+          title={`${title} | ${get(siteMetadata, 'title')}`}
           meta={[
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: `@${get(site, 'twitter')}` },
@@ -46,11 +49,14 @@ class Blog extends React.Component {
             },
           ]}
         />
-        <section>
-          <div className="container p-0">
-            <div className="card-columns">{pageLinks}</div>
-          </div>
-        </section>
+
+        <Layout location={this.props.location}>
+          <section>
+            <div className="container p-0">
+              <div className="card-columns">{pageLinks}</div>
+            </div>
+          </section>
+        </Layout>
       </div>
     )
   }

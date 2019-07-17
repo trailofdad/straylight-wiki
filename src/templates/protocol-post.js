@@ -1,18 +1,12 @@
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import React from 'react'
 
+import Layout from '../components/Layout'
 import ProtocolPost from '../components/ProtocolPost'
 import ProtocolMenu from '../components/ProtocolMenu'
 
 class ProtocolPostTemplate extends React.Component {
-  getAuthor(id, authors) {
-    let author = authors.find(({ author }) => author.ghostId === id)
-
-    if (author) return author.author
-  }
-
   componentDidMount() {
     setTimeout(() => {
       $('.article-wrap').css({ opacity: 1 })
@@ -22,7 +16,6 @@ class ProtocolPostTemplate extends React.Component {
   render() {
     const post = get(this, 'props.data.postResource.posts[0].post')
     const tags = get(this, 'props.data.tagResource.tags')
-    const authors = get(this, 'props.data.authorResource.authors')
 
     const site = get(this, 'props.data.site')
     const title = get(post, 'title')
@@ -32,7 +25,7 @@ class ProtocolPostTemplate extends React.Component {
       <ProtocolPost
         data={post}
         site={site}
-        author={this.getAuthor(post.author, authors)}
+        author={post.primary_author}
         isIndex={false}
       />
     )
@@ -62,14 +55,17 @@ class ProtocolPostTemplate extends React.Component {
             },
           ]}
         />
-        <section className="pt-4">
-          <ProtocolMenu
-            tags={tags}
-            {...this.props}
-            postTag={get(post, 'tags[0].slug')}
-          />
-          {template}
-        </section>
+
+        <Layout location={this.props.location}>
+          <section className="pt-4">
+            <ProtocolMenu
+              tags={tags}
+              {...this.props}
+              postTag={get(post, 'tags[0].slug')}
+            />
+            {template}
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -97,7 +93,11 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            id
+            name
+            profile_image
+          }
           featured
           tags {
             id
@@ -110,18 +110,9 @@ export const pageQuery = graphql`
     tagResource: allGhostTag {
       tags: edges {
         tag: node {
-          ghostId
+          id
           slug
           name
-        }
-      }
-    }
-    authorResource: allGhostAuthor {
-      authors: edges {
-        author: node {
-          ghostId
-          name
-          profile_image
         }
       }
     }
