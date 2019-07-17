@@ -2,7 +2,6 @@ import React from 'react'
 import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
-import LazyLoad from 'react-lazyload'
 import Layout from '../../components/Layout'
 import { siteMetadata } from '../../../gatsby-config'
 
@@ -23,9 +22,7 @@ class Blog extends React.Component {
       const path = get(data, 'post.path')
       if (layout === 'post' && path !== '/404/') {
         pageLinks.push(
-          <LazyLoad height={500} offset={500} once={true} key={i}>
-            <SiteCard data={data.post} site={site} isIndex={true} key={i} />
-          </LazyLoad>
+          <SiteCard data={data.post} site={site} isIndex={true} key={i} />
         )
       }
     })

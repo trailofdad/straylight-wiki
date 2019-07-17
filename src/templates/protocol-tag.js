@@ -1,7 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import LazyLoad from 'react-lazyload'
 
 import Layout from '../components/Layout'
 import ProtocolCard from '../components/ProtocolCard'
@@ -39,15 +38,13 @@ class ProtocolTagTemplate extends React.Component {
     if (posts) {
       posts.map((data, i) => {
         pageLinks.push(
-          <LazyLoad height={500} offset={500} once={true} key={i}>
-            <ProtocolCard
-              data={data.post}
-              site={site}
-              author={data.post.primary_author}
-              isIndex={true}
-              key={i}
-            />
-          </LazyLoad>
+          <ProtocolCard
+            data={data.post}
+            site={site}
+            author={data.post.primary_author}
+            isIndex={true}
+            key={i}
+          />
         )
       })
     } else {
