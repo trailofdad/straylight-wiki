@@ -4,6 +4,7 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 import Layout from '../../components/Layout'
+import { siteMetadata } from '../../../gatsby-config'
 
 import SiteCard from '../../components/SiteCard'
 
@@ -29,10 +30,12 @@ class Blog extends React.Component {
       }
     })
 
+    const title = 'Journal'
+
     return (
       <div>
         <Helmet
-          title={get(site, 'title')}
+          title={`${title} | ${get(siteMetadata, 'title')}`}
           meta={[
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: `@${get(site, 'twitter')}` },

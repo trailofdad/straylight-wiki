@@ -12,7 +12,6 @@ class Index extends React.Component {
   render() {
     const pathPrefix =
       process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-    const title = 'Straylight Systems'
 
     const pageLinks = []
 
@@ -37,14 +36,14 @@ class Index extends React.Component {
     return (
       <div>
         <Helmet
-          title={`${title} | ${get(siteMetadata, 'title')}`}
+          title={`${get(siteMetadata, 'title')}`}
           meta={[
             { name: 'twitter:card', content: 'summary' },
             {
               name: 'twitter:site',
               content: `@${get(siteMetadata, 'twitter')}`,
             },
-            { property: 'og:title', content: title },
+            { property: 'og:title', content: 'Straylight Systems' },
             { property: 'og:type', content: 'website' },
             {
               property: 'og:description',
