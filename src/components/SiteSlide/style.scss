@@ -1,4 +1,4 @@
-@import '../../layouts/colors.scss';
+@import '../../components/Layout/colors.scss';
 
 .carousel {
   position: relative;
@@ -17,7 +17,7 @@
 }
 
 .carousel-item {
-  height: 400px;
+  height: 440px;
 
   &:not(:first-child) {
     .container {

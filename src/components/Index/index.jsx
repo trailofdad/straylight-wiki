@@ -86,14 +86,14 @@ class Index extends React.Component {
                   <div>
                     <a
                       href="https://www.youtube.com/watch?v=JmXC1jmbLWc"
-                      className="btn btn-outline-primary"
+                      className="btn btn-outline-light"
                       target="_blank"
                     >
                       Watch a video
                     </a>
                     <a
                       href="/apply"
-                      className="btn btn-outline-light ml-1 ml-md-3"
+                      className="btn btn-outline-primary ml-1 ml-md-3"
                       target="_self"
                     >
                       Learn about Straylight

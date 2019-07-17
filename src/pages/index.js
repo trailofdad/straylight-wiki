@@ -1,10 +1,8 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
-import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
-import LazyLoad from 'react-lazyload'
 import Index from '../components/Index/index'
+import Layout from '../components/layout'
 
 class SiteIndex extends React.Component {
   render() {
@@ -28,7 +26,10 @@ class SiteIndex extends React.Component {
             },
           ]}
         />
-        <Index posts={data.remark.posts} />
+
+        <Layout location={this.props.location}>
+          <Index posts={data.remark.posts} />
+        </Layout>
       </div>
     )
   }

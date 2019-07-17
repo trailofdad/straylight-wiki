@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import Layout from '../../components/Layout'
 
 import SiteCard from '../../components/SiteCard'
 
@@ -46,11 +46,14 @@ class Blog extends React.Component {
             },
           ]}
         />
-        <section>
-          <div className="container p-0">
-            <div className="card-columns">{pageLinks}</div>
-          </div>
-        </section>
+
+        <Layout location={this.props.location}>
+          <section>
+            <div className="container p-0">
+              <div className="card-columns">{pageLinks}</div>
+            </div>
+          </section>
+        </Layout>
       </div>
     )
   }

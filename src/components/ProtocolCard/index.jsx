@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import get from 'lodash/get'
 
@@ -44,7 +44,10 @@ class ProtocolCard extends React.Component {
                 Read more
               </button>
 
-              <img className="author-image" src={author.profile_image} />
+              <img
+                className="author-image"
+                src={primary_author.profile_image}
+              />
             </div>
           </div>
 
