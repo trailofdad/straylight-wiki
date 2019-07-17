@@ -4,7 +4,7 @@ import './style.css'
 class Adsense extends React.Component {
   componentDidMount() {
     const { clientId } = this.props
-    if (clientId) {
+    if (clientId && window) {
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     }
   }

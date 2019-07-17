@@ -44,10 +44,7 @@ class ProtocolCard extends React.Component {
                 Read more
               </button>
 
-              <img
-                className="author-image"
-                src={primary_author.profile_image}
-              />
+              <img className="author-image" src={author.profile_image} />
             </div>
           </div>
 

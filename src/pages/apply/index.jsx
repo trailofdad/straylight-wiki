@@ -2,7 +2,7 @@ import get from 'lodash/get'
 import React from 'react'
 import Helmet from 'react-helmet'
 import { siteMetadata } from '../../../gatsby-config'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 
 class Apply extends React.Component {
   render() {

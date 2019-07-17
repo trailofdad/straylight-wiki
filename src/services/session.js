@@ -4,7 +4,8 @@ const Session = {
   state: {},
 
   protectRoutes() {
-    if (window.location.href.includes('protocol')) window.location.href = '/'
+    if (window && window.location.href.includes('protocol'))
+      window.location.href = '/'
   },
 
   async initialize() {

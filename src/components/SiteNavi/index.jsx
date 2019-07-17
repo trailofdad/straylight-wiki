@@ -10,7 +10,9 @@ import get from 'lodash/get'
 import './style.scss'
 
 const deauth = () => {
-  window.location.href = '/'
+  if (window) {
+    window.location.href = '/'
+  }
 }
 
 class SiteNavi extends React.Component {

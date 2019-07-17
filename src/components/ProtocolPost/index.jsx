@@ -75,13 +75,8 @@ class ProtocolPost extends React.Component {
               <Link style={{ boxShadow: 'none' }} to={path}>
                 <h1>{title}</h1>
               </Link>
-              <img
-                className="author-image"
-                src={primary_author.profile_image}
-              />
-              <small className="author">
-                {primary_author ? primary_author.name : ''}
-              </small>
+              <img className="author-image" src={author.profile_image} />
+              <small className="author">{author ? author.name : ''}</small>
               <time dateTime={date}>{date}</time>
               {this.categories(tags, isFeatured)}
             </div>

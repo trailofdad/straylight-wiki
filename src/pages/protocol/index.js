@@ -18,12 +18,6 @@ class ProtocolEntry extends React.Component {
     }, 500)
   }
 
-  getAuthor(id, authors) {
-    let author = authors.find(({ author }) => author.ghostId === id)
-
-    if (author) return author.author
-  }
-
   render() {
     // if (!Session.state || !Session.state.isInitialized) {
     //   navigateTo('/')
@@ -34,7 +28,6 @@ class ProtocolEntry extends React.Component {
     const posts = get(this, 'props.data.postResource.posts')
     const featuredPosts = get(this, 'props.data.featuredPostResource.posts')
     const tags = get(this, 'props.data.tagResource.tags')
-    const authors = get(this, 'props.data.authorResource.authors')
 
     const pageLinks = []
 
@@ -45,7 +38,7 @@ class ProtocolEntry extends React.Component {
             <ProtocolCard
               data={data.post}
               site={site}
-              author={this.getAuthor(data.post.author, authors)}
+              author={data.post.primary_author}
               isIndex={true}
               key={i}
             />
@@ -61,7 +54,7 @@ class ProtocolEntry extends React.Component {
             <ProtocolCard
               data={data.post}
               site={site}
-              author={this.getAuthor(data.post.author, authors)}
+              author={data.post.primary_author}
               isIndex={true}
               key={i + 1}
             />
@@ -119,7 +112,7 @@ export const pageQuery = graphql`
     tagResource: allGhostTag {
       tags: edges {
         tag: node {
-          ghostId
+          id
           slug
           name
         }
@@ -137,6 +130,7 @@ export const pageQuery = graphql`
           html
           published_at(formatString: "YYYY/MM/DD")
           primary_author {
+            id
             name
             profile_image
           }
@@ -160,6 +154,7 @@ export const pageQuery = graphql`
           html
           published_at(formatString: "YYYY/MM/DD")
           primary_author {
+            id
             name
             profile_image
           }
@@ -169,15 +164,6 @@ export const pageQuery = graphql`
             name
             slug
           }
-        }
-      }
-    }
-    authorResource: allGhostAuthor {
-      authors: edges {
-        author: node {
-          ghostId
-          name
-          profile_image
         }
       }
     }
