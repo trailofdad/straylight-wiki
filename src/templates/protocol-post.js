@@ -1,8 +1,8 @@
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import React from 'react'
 
+import Layout from '../components/Layout'
 import ProtocolPost from '../components/ProtocolPost'
 import ProtocolMenu from '../components/ProtocolMenu'
 
@@ -62,14 +62,17 @@ class ProtocolPostTemplate extends React.Component {
             },
           ]}
         />
-        <section className="pt-4">
-          <ProtocolMenu
-            tags={tags}
-            {...this.props}
-            postTag={get(post, 'tags[0].slug')}
-          />
-          {template}
-        </section>
+
+        <Layout location={this.props.location}>
+          <section className="pt-4">
+            <ProtocolMenu
+              tags={tags}
+              {...this.props}
+              postTag={get(post, 'tags[0].slug')}
+            />
+            {template}
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -97,7 +100,10 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            name
+            profile_image
+          }
           featured
           tags {
             id

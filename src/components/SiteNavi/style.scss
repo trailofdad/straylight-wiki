@@ -1,4 +1,4 @@
-@import '../../layouts/colors.scss';
+@import '../../components/Layout/colors.scss';
 
 .navbar {
   text-transform: uppercase;
@@ -7,6 +7,10 @@
   .navbar-brand {
     letter-spacing: 5px;
     font-weight: 300;
+  }
+
+  &.bg-dark {
+    background-color: #17191bc4 !important;
   }
 
   .dropdown-menu.bg-dark {

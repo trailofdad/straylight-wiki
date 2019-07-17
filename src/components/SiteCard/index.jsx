@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'

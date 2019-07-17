@@ -1,6 +1,5 @@
 import React from 'react'
-import { siteMetadata } from '../../gatsby-config'
-import emergence from 'emergence.js'
+import { siteMetadata } from '../../../gatsby-config'
 
 import './gatstrap.scss'
 import 'animate.css/animate.css'
@@ -8,13 +7,11 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'devicon-2.2/devicon.min.css'
 import 'font-awesome/css/font-awesome.css'
 
-import SiteNavi from '../components/SiteNavi'
-import Session from '../services/session'
+import SiteNavi from '../SiteNavi'
+import Session from '../../services/session'
 
-class Template extends React.Component {
+class Layout extends React.Component {
   async componentWillMount() {
-    // emergence.init()
-
     try {
       await Session.initialize()
     } catch (e) {
@@ -22,10 +19,6 @@ class Template extends React.Component {
     }
 
     if (Session && Session.state) this.setState(Session.state)
-  }
-
-  componentDidUpdate() {
-    // emergence.init()
   }
 
   render() {
@@ -38,10 +31,10 @@ class Template extends React.Component {
           title={siteMetadata.title}
           {...this.props}
         />
-        {children()}
+        {children}
       </div>
     )
   }
 }
 
-export default Template
+export default Layout

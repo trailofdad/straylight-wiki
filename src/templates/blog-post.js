@@ -1,8 +1,8 @@
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import React from 'react'
 
+import Layout from '../components/Layout'
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
 
@@ -41,7 +41,10 @@ class BlogPostTemplate extends React.Component {
             },
           ]}
         />
-        <section>{template}</section>
+
+        <Layout location={this.props.location}>
+          <section>{template}</section>
+        </Layout>
       </div>
     )
   }

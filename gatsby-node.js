@@ -1,16 +1,6 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
-const select = require('unist-util-select')
-const fs = require('fs-extra')
-
-exports.modifyBabelrc = ({ babelrc }) => ({
-  ...babelrc,
-  plugins: babelrc.plugins.concat(
-    ['transform-regenerator'],
-    ['transform-runtime']
-  ),
-})
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators

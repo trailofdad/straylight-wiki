@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
-import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
+import Layout from '../components/Layout'
 import ProtocolCard from '../components/ProtocolCard'
 import ProtocolMenu from '../components/ProtocolMenu'
 
@@ -48,13 +47,6 @@ class ProtocolTagTemplate extends React.Component {
       posts.map((data, i) => {
         pageLinks.push(
           <LazyLoad height={500} offset={500} once={true} key={i}>
-            {/* <ProtocolPost
-              data={data.post}
-              site={site}
-              author={this.getAuthor(data.post.author, authors)}
-              isIndex={true}
-              key={i}
-            /> */}
             <ProtocolCard
               data={data.post}
               site={site}
@@ -86,13 +78,16 @@ class ProtocolTagTemplate extends React.Component {
             },
           ]}
         />
-        <section className="pt-4">
-          <ProtocolMenu tags={tags} slug={slug} {...this.props} />
 
-          <div className="container p-0">
-            <div className="card-columns">{pageLinks}</div>
-          </div>
-        </section>
+        <Layout location={this.props.location}>
+          <section className="pt-4">
+            <ProtocolMenu tags={tags} slug={slug} {...this.props} />
+
+            <div className="container p-0">
+              <div className="card-columns">{pageLinks}</div>
+            </div>
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -118,7 +113,10 @@ export const pageQuery = graphql`
           slug
           title
           html
-          author
+          primary_author {
+            name
+            profile_image
+          }
           tags {
             id
             name

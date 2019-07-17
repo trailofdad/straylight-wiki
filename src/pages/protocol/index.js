@@ -1,13 +1,11 @@
 import React from 'react'
-import Link, { navigateTo } from 'gatsby-link'
 import get from 'lodash/get'
-import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import LazyLoad from 'react-lazyload'
+import Layout from '../../components/Layout'
 
 import ProtocolCard from '../../components/ProtocolCard'
 import ProtocolMenu from '../../components/ProtocolMenu'
-import Session from '../../services/session'
 
 class ProtocolEntry extends React.Component {
   componentDidMount() {
@@ -89,13 +87,16 @@ class ProtocolEntry extends React.Component {
             },
           ]}
         />
-        <section className="pt-4">
-          <ProtocolMenu tags={tags} {...this.props} />
 
-          <div className="container p-0">
-            <div className="card-columns">{pageLinks}</div>
-          </div>
-        </section>
+        <Layout location={this.props.location}>
+          <section className="pt-4">
+            <ProtocolMenu tags={tags} {...this.props} />
+
+            <div className="container p-0">
+              <div className="card-columns">{pageLinks}</div>
+            </div>
+          </section>
+        </Layout>
       </div>
     )
   }
@@ -135,7 +136,10 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            name
+            profile_image
+          }
           tags {
             id
             name
@@ -155,7 +159,10 @@ export const pageQuery = graphql`
           title
           html
           published_at(formatString: "YYYY/MM/DD")
-          author
+          primary_author {
+            name
+            profile_image
+          }
           featured
           tags {
             id
