@@ -53,13 +53,10 @@ class SiteSlide extends React.Component {
         <div className="container p-0 my-3 my-lg-5">
           <Link style={{ boxShadow: 'none', display: 'block' }} to={path}>
             <h1>{title}</h1>
-            <p
+            <div
               className="lead"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            {/* <p className="date">
-              {date}
-            </p> */}
           </Link>
         </div>
       </div>
