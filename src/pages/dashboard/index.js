@@ -145,11 +145,12 @@ class Dashboard extends React.Component {
 
       if (doctrines) {
         doctrines.map(doctrine => {
-          let { description, name, data } = doctrine
+          let { description, name, data, id } = doctrine
           let fleet = {
             description,
             name,
             fittings: [],
+            id,
           }
 
           let fitNames = Object.keys(data)
@@ -185,7 +186,7 @@ class Dashboard extends React.Component {
             }
           })
 
-          if (fleet.name === 'GOLD WING' && allFitValues.true >= 2) {
+          if (fleet.name === 'BLOPS/CAPS' && allFitValues.true >= 2) {
             fleet.readiness = 1
           } else {
             fleet.readiness = Number(
@@ -214,7 +215,7 @@ class Dashboard extends React.Component {
               </p>
               <div className="d-flex justify-content-between">
                 <a
-                  href={`https://auth.whodareswins.space/fitting/doctrine${fleet.id}`}
+                  href={`https://auth.whodareswins.space/fitting/doctrine/${fleet.id}`}
                   target="_blank"
                 >
                   <button className="btn btn-sm btn-outline-primary">
