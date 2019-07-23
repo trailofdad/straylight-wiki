@@ -2,7 +2,6 @@ import get from 'lodash/get'
 import React from 'react'
 import Helmet from 'react-helmet'
 import sortBy from 'lodash/sortBy'
-import LazyLoad from 'react-lazyload'
 
 import { siteMetadata } from '../../../gatsby-config'
 
@@ -10,9 +9,6 @@ import SiteSlide from '../SiteSlide'
 
 class Index extends React.Component {
   render() {
-    const pathPrefix =
-      process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-
     const pageLinks = []
 
     const posts = get(this, 'props.posts')
@@ -25,11 +21,7 @@ class Index extends React.Component {
       const layout = get(data, 'post.frontmatter.layout')
       const path = get(data, 'post.path')
       if (layout === 'post' && path !== '/404/') {
-        pageLinks.push(
-          <LazyLoad height={500} offset={500} once={true} key={i}>
-            <SiteSlide data={data.post} isIndex={true} key={i} />
-          </LazyLoad>
-        )
+        pageLinks.push(<SiteSlide data={data.post} isIndex={true} key={i} />)
       }
     })
 
