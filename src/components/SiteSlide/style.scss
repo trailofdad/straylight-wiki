@@ -77,13 +77,13 @@
 
   &.active {
     h1,
-    p.lead > p:last-child,
+    .lead > p:last-child,
     p.date {
       opacity: 1;
     }
   }
 
-  p.lead {
+  .lead {
     color: white;
 
     > p:last-child {
