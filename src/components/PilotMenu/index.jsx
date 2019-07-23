@@ -45,21 +45,36 @@ class PilotMenu extends React.Component {
             href="https://mgmt.straylight.systems"
             target="_blank"
           >
-            Corp Services
+            Corp Auth
           </a>
           <a
             className="dropdown-item"
             href="https://auth.whodareswins.space"
             target="_blank"
           >
-            Alliance Services
+            Alliance Auth
           </a>
+          <a
+            className="dropdown-item"
+            href="https://auth.rekkingcrew.org"
+            target="_blank"
+          >
+            RC Auth
+          </a>
+          <div className="dropdown-divider" />
           <a
             className="dropdown-item"
             href="ts3server://voice.whodareswins.space"
             target="_blank"
           >
             Alliance Comms
+          </a>
+          <a
+            className="dropdown-item"
+            href="ts3server://voice.rekkingcrew.org"
+            target="_blank"
+          >
+            RC Comms
           </a>
           <div className="dropdown-divider" />
           <a className="dropdown-item" href="#" onClick={logout}>

@@ -114,7 +114,7 @@ class Dashboard extends React.Component {
                     target="_blank"
                   >
                     <button className="btn btn-sm btn-outline-primary">
-                      Respond to {data.fc}
+                      Respond to {data.fc ? data.fc : 'FC'}
                     </button>
                   </a>
 
@@ -188,8 +188,12 @@ class Dashboard extends React.Component {
           if (fleet.name === 'GOLD WING' && allFitValues.true >= 2) {
             fleet.readiness = 1
           } else {
-            fleet.readiness =
-              allFitValues.true / (allFitValues.true + allFitValues.false)
+            fleet.readiness = Number(
+              (
+                allFitValues.true /
+                (allFitValues.true + allFitValues.false)
+              ).toFixed(2)
+            )
           }
 
           fleets.push(fleet)
@@ -210,11 +214,11 @@ class Dashboard extends React.Component {
               </p>
               <div className="d-flex justify-content-between">
                 <a
-                  href="https://auth.whodareswins.space/fitting/doctrine"
+                  href={`https://auth.whodareswins.space/fitting/doctrine${fleet.id}`}
                   target="_blank"
                 >
                   <button className="btn btn-sm btn-outline-primary">
-                    View details
+                    View doctrine
                   </button>
                 </a>
               </div>
@@ -242,7 +246,7 @@ class Dashboard extends React.Component {
 
           <h3 className="text-muted mt-4 pt-4 pb-4">Doctrine coverage</h3>
           <div className="container p-0">
-            <div className="card-deck">{fleetCards}</div>
+            <div className="card-columns">{fleetCards}</div>
           </div>
         </div>
       )
