@@ -3,6 +3,7 @@
 .navbar {
   text-transform: uppercase;
   border-bottom: 1px $gray-800 solid;
+  z-index: 100;
 
   .navbar-brand {
     letter-spacing: 5px;

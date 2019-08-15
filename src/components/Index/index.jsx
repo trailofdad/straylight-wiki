@@ -51,12 +51,15 @@ class Index extends React.Component {
             },
           ]}
         />
+
+        <video autoPlay muted loop className="flash-trailer">
+          <source src={`/mp4/blackout.mp4`} type="video/mp4" />
+        </video>
+
+        <div className="flash-overlay" />
+
         <section style={{ paddingTop: 0 }}>
-          <div
-            id="hero_carousel"
-            className="carousel slide"
-            data-ride="carousel"
-          >
+          <div id="hero_carousel" className="carousel slide">
             <ol className="carousel-indicators">
               <li
                 data-target="#hero_carousel"
@@ -70,9 +73,9 @@ class Index extends React.Component {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <div className="container p-0 my-3 my-lg-5 text-center">
-                  <h1 className="tagline">A squadron worth fighting for</h1>
+                  <h1 className="tagline">New Eden is a harsh place</h1>
                   <p className="lead text-primary">
-                    Often outmanned, never outgunned.
+                    The friends you choose can make it easier.
                   </p>
 
                   <div>
@@ -81,7 +84,7 @@ class Index extends React.Component {
                       className="btn btn-outline-light"
                       target="_blank"
                     >
-                      Watch a video
+                      Watch the new video
                     </a>
                     <a
                       href="/apply"

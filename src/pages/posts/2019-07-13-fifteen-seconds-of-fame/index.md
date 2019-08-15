@@ -21,7 +21,7 @@ In its first outing flying a new fleet concept based on the legendary Rooks and 
 After baiting the enemy fleet with a cyno, RC Rokhs bridged in to a designated location in Providence's home system, 9UY4-H - landing squarely in their warp destination, and killing every single one of them - pods included.
 
 ## Watch
-* [Video uplink](https://www.youtube.com/watch?v=vcBC8l0jrD4&feature=youtu.be)
+* [Video uplink](http://whodareswins.space/blackout)
 
 ## Battle Analysis
 * [Providence Report](https://br.inyour.space/?s=3707&b=8693270&e=10&t=afzc)
