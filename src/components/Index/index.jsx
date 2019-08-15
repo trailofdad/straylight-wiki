@@ -80,7 +80,7 @@ class Index extends React.Component {
 
                   <div>
                     <a
-                      href="https://www.youtube.com/watch?v=JmXC1jmbLWc"
+                      href="http://whodareswins.space/blackout"
                       className="btn btn-outline-light"
                       target="_blank"
                     >

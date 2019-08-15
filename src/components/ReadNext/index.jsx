@@ -15,8 +15,8 @@ class ReadNext extends React.Component {
           {title}
           <br />
           Watch our latest video:{' '}
-          <a href="https://www.youtube.com/watch?v=JmXC1jmbLWc" target="_blank">
-            Who Dares Wins: Derelik
+          <a href="http://whodareswins.space/blackout" target="_blank">
+            Who Dares Wins: Blackout
           </a>
         </p>
       </div>
