@@ -22,10 +22,10 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { location, children } = this.props
+    const { children } = this.props
 
     return (
-      <div className={location.pathname === '/' ? 'with-background' : ''}>
+      <div>
         <SiteNavi
           session={this.state}
           title={siteMetadata.title}

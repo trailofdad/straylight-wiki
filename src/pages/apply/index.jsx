@@ -205,10 +205,33 @@ class Apply extends React.Component {
             <div className="container p-0">
               <h1 className="text-center">Not convinced?</h1>
               <p className="lead text-center text-primary pb-4">
-                Watch a video. Or three.
+                Watch a video. Or four.
               </p>
 
               <div className="card-deck mb-md-4">
+                <div className="card bg-dark text-white">
+                  <img
+                    className="card-img-top"
+                    src="https://img.youtube.com/vi/h6K3RMlUcRA/maxresdefault.jpg"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">Who Dares Wins: Blackout</h5>
+                    <p className="card-text">
+                      In YC121, CCP implemented a nullsec wide blackout of local
+                      channels, effectively leaving pilots in the dark. This
+                      film captures some of the most intense moments we've
+                      experienced as a part of this new development in New Eden.
+                    </p>
+                    <a
+                      className="btn btn-outline-primary"
+                      href="http://whodareswins.space/blackout"
+                      target="_blank"
+                    >
+                      Watch now
+                    </a>
+                  </div>
+                </div>
+
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img-top"
@@ -237,6 +260,28 @@ class Apply extends React.Component {
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img-top"
+                    src="https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">Who Dares Wins: Metropolis</h5>
+                    <p className="card-text">
+                      Who Dares Wins, our brotherhood, specializes in mercenary
+                      and black ops operations - and the occasional capital
+                      slugfest, when the need arises.
+                    </p>
+                    <a
+                      className="btn btn-outline-primary"
+                      href="https://www.youtube.com/watch?v=diFsV8f-FXY"
+                      target="_blank"
+                    >
+                      Watch now
+                    </a>
+                  </div>
+                </div>
+
+                <div className="card bg-dark text-white">
+                  <img
+                    className="card-img-top"
                     src="https://img.youtube.com/vi/b4SfPGib7VQ/maxresdefault.jpg"
                   />
                   <div className="card-body">
@@ -248,28 +293,6 @@ class Apply extends React.Component {
                     <a
                       className="btn btn-outline-primary"
                       href="https://www.youtube.com/watch?v=b4SfPGib7VQ"
-                      target="_blank"
-                    >
-                      Watch now
-                    </a>
-                  </div>
-                </div>
-
-                <div className="card bg-dark text-white">
-                  <img
-                    className="card-img-top"
-                    src="https://img.youtube.com/vi/diFsV8f-FXY/maxresdefault.jpg"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Who Dares Wins Trailer</h5>
-                    <p className="card-text">
-                      Who Dares Wins, our brotherhood, specializes in mercenary
-                      and black ops operations - and the occasional capital
-                      slugfest, when the need arises.
-                    </p>
-                    <a
-                      className="btn btn-outline-primary"
-                      href="https://www.youtube.com/watch?v=diFsV8f-FXY"
                       target="_blank"
                     >
                       Watch now
