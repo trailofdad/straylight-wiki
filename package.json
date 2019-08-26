@@ -1,7 +1,7 @@
 {
   "name": "straylight-wiki",
   "description": "A blog/wiki for Straylight Systems",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "author": "Christian Hapgood <christian.hapgood@gmail.com>",
   "dependencies": {
     "axios": "^0.19.0",
