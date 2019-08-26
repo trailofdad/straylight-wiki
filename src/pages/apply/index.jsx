@@ -58,7 +58,7 @@ class Apply extends React.Component {
                     </p>
                     <a
                       className="btn btn-outline-primary"
-                      href="https://discord.gg/35RcgXA"
+                      href="https://discord.gg/QRfKS6b"
                       target="_blank"
                     >
                       Join now
