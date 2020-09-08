@@ -77,7 +77,7 @@ module.exports = {
       resolve: `gatsby-source-ghost`,
       options: {
         apiUrl: `https://api.straylight.systems`,
-        contentApiKey: `f60a218f1f09f209f726c0ab93`,
+        contentApiKey: `5edf9d644b34805db5fd123f59`,
       },
     },
     'gatsby-plugin-offline',

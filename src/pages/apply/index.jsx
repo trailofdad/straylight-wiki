@@ -58,7 +58,7 @@ class Apply extends React.Component {
                     </p>
                     <a
                       className="btn btn-outline-primary"
-                      href="https://discord.gg/QRfKS6b"
+                      href="https://discord.gg/G5vdnT5"
                       target="_blank"
                     >
                       Join now
@@ -81,12 +81,12 @@ class Apply extends React.Component {
                   <div className="card-body">
                     <h5 className="card-title">Register for services</h5>
                     <p className="card-text">
-                      Sign in with your main to our secure, automated tool for
-                      services access.
+                      Sign in with your EVE account to our secure, automated
+                      tool for services access.
                     </p>
                     <a
                       className="btn btn-outline-primary"
-                      href="https://mgmt.straylight.systems/"
+                      href="https://auth.whodareswins.space/"
                       target="_blank"
                     >
                       Register now
@@ -112,10 +112,7 @@ class Apply extends React.Component {
 
               <div className="card-columns pt-3">
                 <div className="card bg-dark text-white">
-                  <img
-                    className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/2018.04.24.21.16.08.jpg"
-                  />
+                  <img className="card-img-top" src="/img/f_0018e2.jpg" />
                   <div className="card-body">
                     <h5 className="card-title">Constant fleet action</h5>
                     <p className="card-text">
@@ -127,10 +124,7 @@ class Apply extends React.Component {
                 </div>
 
                 <div className="card bg-dark text-white">
-                  <img
-                    className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/2017.06.25.02.15.54.jpg"
-                  />
+                  <img className="card-img-top" src="/img/f_0018d2.jpg" />
                   <div className="card-body">
                     <h5 className="card-title">Supercapital hunting</h5>
                     <p className="card-text">
@@ -143,7 +137,7 @@ class Apply extends React.Component {
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/2018.06.17.02.40.47.jpg"
+                    src="/img/Desktop_Screenshot_2019.05.30_-_14.59.14.21.png"
                   />
                   <div className="card-body">
                     <h5 className="card-title">R64 moon mining operations</h5>
@@ -155,10 +149,7 @@ class Apply extends React.Component {
                 </div>
 
                 <div className="card bg-dark text-white">
-                  <img
-                    className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/2017.12.02.20.09.55.jpg"
-                  />
+                  <img className="card-img-top" src="/img/f_0018df.jpg" />
                   <div className="card-body">
                     <h5 className="card-title">Free asset relocation</h5>
                     <p className="card-text">
@@ -170,10 +161,7 @@ class Apply extends React.Component {
                 </div>
 
                 <div className="card bg-dark text-white">
-                  <img
-                    className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/2017.05.13.20.29.36.jpg"
-                  />
+                  <img className="card-img-top" src="/img/f_0018d1.jpg" />
                   <div className="card-body">
                     <h5 className="card-title">Black Ops Training</h5>
                     <p className="card-text">
@@ -187,7 +175,7 @@ class Apply extends React.Component {
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img-top"
-                    src="https://api.straylight.systems/content/images/2018/09/Eve-Online-05.10.2017---01.50.51.16.jpg"
+                    src="/img/2018.11.25.00.07.42.png"
                   />
                   <div className="card-body">
                     <h5 className="card-title">Resupply from The Forge</h5>

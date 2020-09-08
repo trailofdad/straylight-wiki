@@ -75,7 +75,7 @@ class Index extends React.Component {
                 <div className="container p-0 my-3 my-lg-5 text-center">
                   <h1 className="tagline">New Eden is a harsh place</h1>
                   <p className="lead text-primary">
-                    The friends you choose can make it easier.
+                    The friends beside you can make it easier.
                   </p>
 
                   <div>
@@ -124,10 +124,7 @@ class Index extends React.Component {
           <div className="container p-0">
             <div className="card-deck">
               <div className="card bg-dark text-white">
-                <img
-                  className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2018.09.01.02.45.16.jpg"
-                />
+                <img className="card-img-top" src="/img/f_0018d3.jpg" />
                 <div className="card-body">
                   <h5 className="card-title">Small, but mighty</h5>
                   <p className="card-text">
@@ -140,7 +137,7 @@ class Index extends React.Component {
               <div className="card bg-dark text-white">
                 <img
                   className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.05.27.23.38.54.jpg"
+                  src="/img/vlcsnap-2019-07-22-21h19m59s783-2.png"
                 />
                 <div className="card-body">
                   <h5 className="card-title">Learn from the best</h5>
@@ -153,10 +150,7 @@ class Index extends React.Component {
               </div>
 
               <div className="card bg-dark text-white">
-                <img
-                  className="card-img-top"
-                  src="https://api.straylight.systems/content/images/2018/09/2017.02.28.02.10.30.jpg"
-                />
+                <img className="card-img-top" src="/img/f_0018e1.jpg" />
                 <div className="card-body">
                   <h5 className="card-title">Friends for life</h5>
                   <p className="card-text">

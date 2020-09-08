@@ -9,13 +9,13 @@ class PilotMenu extends React.Component {
     if (!isAuthorized) {
       return (
         <li className="nav-item">
-          <a
+          {/* <a
             href={process.env.AUTH_URL + '/authorize'}
             className="nav-link"
             target="_self"
           >
             Login
-          </a>
+          </a> */}
         </li>
       )
     }

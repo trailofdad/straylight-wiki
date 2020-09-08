@@ -54,7 +54,7 @@ class Origin extends React.Component {
                   immortality.
                 </p>
                 <p>
-                  It is now YC121. Many things have changed. Across New Eden,
+                  It is now YC122. Many things have changed. Across New Eden,
                   capsuleers mindlessly rain death and destruction on each other
                   without purpose or reason.
                 </p>
@@ -81,9 +81,9 @@ class Origin extends React.Component {
                     target="_blank"
                   >
                     Thaddeus Drake
-                  </a>{' '}
-                  who, in all of his glory, invited them to join forces
-                  with&nbsp;
+                  </a>
+                  , Lord of the Cynosural Field, who, in all of his glory,
+                  invited them to join forces with&nbsp;
                   <a
                     href="https://zkillboard.com/alliance/99006020/"
                     target="_blank"
@@ -93,9 +93,9 @@ class Origin extends React.Component {
                   on a quest for dank frags.
                 </p>
                 <p>
-                  Empowered by their newfound devotion, they venture onward, on
-                  a path to create experiences of meaning, hope, and valour. The
-                  Straylight fold has been solidified, and the greatest
+                  Empowered by their newfound motivation, they venture onward,
+                  on a path to create experiences of meaning, hope, and glory.
+                  The Straylight fold has been solidified, and the greatest
                   adventure is about to begin.
                 </p>
               </div>
