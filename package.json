@@ -57,7 +57,7 @@
     "lint-staged": "^9.2.0",
     "normalize.css": "^8.0.1",
     "prettier": "^1.9.1",
-    "striptags": "^3.1.1",
+    "striptags": "^3.2.0",
     "textlint": "^11.3.0",
     "textlint-rule-preset-ja-spacing": "^2.0.1",
     "textlint-rule-preset-japanese": "^4.0.0"
